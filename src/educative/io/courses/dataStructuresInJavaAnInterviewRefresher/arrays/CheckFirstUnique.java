@@ -65,6 +65,7 @@ public class CheckFirstUnique {
     public static void main(String[] args) {
         int[] arr = { 9, 2, 3, 2, 6, 6 };
         System.out.println(CheckFirstUnique.findFirstUnique(arr));
+        System.out.println(CheckFirstUnique.findFirstUnique2(arr));
     }
 
 }
