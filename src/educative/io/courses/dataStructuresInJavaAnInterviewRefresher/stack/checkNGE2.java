@@ -5,10 +5,10 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
  * 
  * Implement nextGreaterElement() to find the next greater element of each element of an array.
  * 
- * Solution uses a stack implemention.
+ * Solution uses a stack implementation.
  * 
  */
-public class checkNGE2 {
+public class CheckNGE2 {
 
     public static int[] nextGreaterElement(int[] arr) {
         int[] result = new int[arr.length];
@@ -53,7 +53,7 @@ public class checkNGE2 {
 
     public static void main(String[] args) {
         int[] arr = {4,6,3,2,8,1};
-        int[] result = nextGreaterElement(arr);
+        int[] result = CheckNGE2.nextGreaterElement(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i] + " --> " + result[i]);
         } 

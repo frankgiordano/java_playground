@@ -10,8 +10,8 @@ public class CheckNumEdges {
 
         for (int i = 0; i < g.vertices; i++) {
             Node finger = null;
-            if (g.array[i] != null && g.array[i].headNode != null)
-                finger = g.array[i].headNode.nextElement;
+            if (g.adjacencyList[i] != null && g.adjacencyList[i].headNode != null)
+                finger = g.adjacencyList[i].headNode.nextElement;
             while (finger != null) { 
                 count++;
                 finger = finger.nextElement;

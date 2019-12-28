@@ -1,6 +1,6 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
 
-public class checkCeleb {
+public class CheckCeleb {
 
     public static boolean knows(int[][] party, int a, int b) {
         return party[a][b] == 1 ? true: false;
@@ -48,7 +48,7 @@ public class checkCeleb {
                             { 0, 0, 1, 0 } }; 
 
         int n = 4; 
-        int result = findCelebrity(MATRIX, n); 
+        int result = CheckCeleb.findCelebrity(MATRIX, n);
         if (result == -1)  
         { 
             System.out.println("No Celebrity"); 

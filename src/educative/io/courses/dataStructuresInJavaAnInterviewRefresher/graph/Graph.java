@@ -3,7 +3,7 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.graph;
 /*
 author: educative.io
 */
-public class Graph{
+public class Graph {
     int vertices;
     DoublyLinkedList<Integer> adjacencyList[];
 
@@ -17,31 +17,26 @@ public class Graph{
         }
     }
 
-    public void addEdge(int source, int destination){
+    public void addEdge(int source, int destination) {
         this.adjacencyList[source].insertAtEnd(destination);
-
-        //for undirected graph uncomment the line below
+        // for undirected graph uncomment the line below
         //this.adjacencyList[destination].insertAtEnd(source);
     }
-    public void printGraph()
-    {
+
+    public void printGraph() {
         System.out.println(">>Adjacency List of Directed Graph<<");
-        for (int i = 0; i < vertices; i++)
-        {
-            if(adjacencyList[i]!=null){
+        for (int i = 0; i < vertices; i++) {
+            if (adjacencyList[i] != null) {
                 System.out.print("|" + i + "| => ");
 
                 DoublyLinkedList<Integer>.Node temp = adjacencyList[i].getHeadNode();
-                while (temp != null)
-                {
+                while (temp != null) {
                     System.out.print("[" + temp.data + "] -> ");
                     temp = temp.nextNode;
                 }
                 System.out.println("null");
-            }
-            else{
-
-                System.out.println("|" + i + "| => "+ "null");
+            } else {
+                System.out.println("|" + i + "| => " + "null");
             }
         }
     }

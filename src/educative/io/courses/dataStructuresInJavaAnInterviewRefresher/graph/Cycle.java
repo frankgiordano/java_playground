@@ -21,8 +21,8 @@ public class Cycle {
             int curr_val = stack.pop();
 
             Node finger = null;
-            if (g.array[curr_val] != null && g.array[curr_val].headNode != null)
-                finger = g.array[curr_val].headNode.nextElement;
+            if (g.adjacencyList[curr_val] != null && g.adjacencyList[curr_val].headNode != null)
+                finger = g.adjacencyList[curr_val].headNode.nextElement;
 
             while (finger != null) {
                 int edge = finger.data;

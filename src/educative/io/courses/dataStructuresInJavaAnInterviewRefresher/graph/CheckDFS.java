@@ -28,8 +28,8 @@ public class CheckDFS {
             result += String.valueOf(current_node);
 
             Node finger = null;
-            if (g.array[current_node] != null && g.array[current_node].headNode != null)
-                finger = g.array[current_node].headNode.nextElement;
+            if (g.adjacencyList[current_node] != null && g.adjacencyList[current_node].headNode != null)
+                finger = g.adjacencyList[current_node].headNode.nextElement;
 
             while (finger != null) {
 

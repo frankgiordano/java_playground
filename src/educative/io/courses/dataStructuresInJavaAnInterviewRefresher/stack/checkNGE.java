@@ -10,7 +10,7 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
  * 
  * author Francesco Giordano
  */
-public class checkNGE {
+public class CheckNGE {
 
     public static int[] nextGreaterElement (int[] arr) {
 
@@ -72,12 +72,12 @@ public class checkNGE {
 
     public static void main(String[] args) {
         int[] arr = {4,6,3,2,8,1};
-        int[] result = nextGreaterElement(arr);
+        int[] result = CheckNGE.nextGreaterElement(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i] + " --> " + result[i]);
         } 
         System.out.println("");
-        result = nextGreaterElement2(arr);
+        result = CheckNGE.nextGreaterElement2(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i] + " --> " + result[i]);
         } 

@@ -1,6 +1,6 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
 
-public class checkParentheses {
+public class CheckParentheses {
 
     public static boolean isCloseParatheses(char c) {
         return c == ')' ? true : false; 
@@ -53,7 +53,7 @@ public class checkParentheses {
 
     public static void main(String[] args) {
         String s = "{ [ ( ) ] }";
-        System.out.println(isBalanced(s));
+        System.out.println(CheckParentheses.isBalanced(s));
     }
 
 }

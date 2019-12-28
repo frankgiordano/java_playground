@@ -29,10 +29,10 @@ class checkBFS {
                 result = result + String.valueOf(value);
             }
             // System.out.println(result);
-            if (g.array[value] == null)
+            if (g.adjacencyList[value] == null)
               continue;
 
-            Node finger = g.array[value].headNode.nextElement;
+            Node finger = g.adjacencyList[value].headNode.nextElement;
             while (finger != null) {
                 int data = finger.data;
                 if (visited[data] != true) 

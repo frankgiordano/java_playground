@@ -3,7 +3,7 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.graph;
 import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.*;
 
 /**
- * Directed Graph data structure
+ * Directed graph data structure
  *
  * This class uses custom built linkedlist to represent the graph.. 
  * 
@@ -12,19 +12,28 @@ import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.
 public class myGraph {
 
     int vertices; 
-    LinkedList[] array;
+    LinkedList[] adjacencyList;
 
-    public myGraph(int size) {
-        vertices = size;
-        array = new LinkedList[size];
+    public myGraph(int vertices) {
+        this.vertices = vertices;
+        adjacencyList = new LinkedList[vertices];
+    }
+
+    public void addEdge(int source, int destination) {
+        LinkedList list = adjacencyList[source];
+        // optimization - instead of allocating/initializing the entire adjacencyList array
+        // in the constructor allocate here if and only if it is being used
+        if (list == null)
+            adjacencyList[source] = new LinkedList();
+        SingleLinkedListOperations.insertAtStart(adjacencyList[source], destination);
     }
 
     public void printGraph() {
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] != null) {  // if check due to optimization below
+        for (int i = 0; i < adjacencyList.length; i++) {
+            if (adjacencyList[i] != null) {  // if check due to optimization below
                 System.out.print(i + " -> ");
-                Node finger = array[i].headNode.nextElement;
+                Node finger = adjacencyList[i].headNode.nextElement;
                 while (finger != null) {
                     System.out.print(finger.data + " -> "); 
                     finger = finger.nextElement;                       
@@ -35,19 +44,8 @@ public class myGraph {
 
     }
 
-    public void addEdge(int source, int destination) {
-        LinkedList list = array[source];
-        // optimization instead of allocating the entire array size in
-        // constructor allocate here if and only if it is being used
-        if (list == null)
-            array[source] = new LinkedList();
-        SingleLinkedListOperations.insertAtStart(array[source], destination);
-    }
-
     public static void main(String[] args) {
-
         myGraph g = new myGraph(10);
-
         g.addEdge(0, 1);
         g.addEdge(0, 2);
         g.addEdge(1, 3);
