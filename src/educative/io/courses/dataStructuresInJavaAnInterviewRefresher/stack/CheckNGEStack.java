@@ -8,32 +8,44 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
  * Solution uses a stack implementation.
  * 
  */
-public class checkNGE3 {
+public class CheckNGEStack {
 
     public static int[] nextGreaterElement(int[] arr) {
-        myStack s = new myStack(arr.length);
         int[] result = new int[arr.length];
         int resultIndex = 0;
+        myStack s = new myStack(arr.length);
+        int element;
         int next;
 
-        for (int i = 0; i < arr.length; i++) {
+        s.push(arr[0]);
 
+        for (int i = 0; i < arr.length; i++) {
             next = arr[i];
 
-            if (s.top() == -1) {
-                s.push(next);
-            } else {
-                while (s.top() != -1 && s.top() < next) {
-                    s.pop();
+            if (!s.isEmpty()) {
+
+                element = s.pop();
+
+                while (element < next) {
+                    // System.out.println(element + " --> " + next);
                     result[resultIndex++] = next;
+                    if (s.isEmpty())
+                        break;
+                    element = s.pop();
                 }
-                s.push(next);
+
+                if (element > next)
+                    s.push(element);
             }
+
+            s.push(next);
         }
 
         while (!s.isEmpty()) {
-            s.pop();
-            result[resultIndex++] = -1;
+            element = s.pop();
+            next = -1;
+            // System.out.println(element + " --> " + next);
+            result[resultIndex++] = next;
         }
 
         return result;
@@ -41,7 +53,7 @@ public class checkNGE3 {
 
     public static void main(String[] args) {
         int[] arr = {4,6,3,2,8,1};
-        int[] result = nextGreaterElement(arr);
+        int[] result = CheckNGEStack.nextGreaterElement(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i] + " --> " + result[i]);
         } 

@@ -4,15 +4,15 @@ import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack.mySta
 
 /**
  * Implement Queue using Stack
- * 
+ *
  * author francesco giordano
  */
-class newQueue {
+public class NewQueue {
 
     private educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack.myStack mainStack;
     private myStack tempStack;
 
-    public newQueue(int size) {
+    public NewQueue(int size) {
         // Can use size from argument to create stack
         mainStack = new myStack(size);
         tempStack = new myStack(size);
@@ -42,8 +42,7 @@ class newQueue {
     }
 
     public static void main(String args[]) {
-
-        newQueue queue = new newQueue(10);
+        NewQueue queue = new NewQueue(10);
         queue.enQueue(1);
         queue.enQueue(2);
         queue.enQueue(3);
@@ -52,7 +51,6 @@ class newQueue {
         for (int i = 0; i < 4; i++) {
             System.out.println(queue.deQueue());
         }
-
     }
 
 }

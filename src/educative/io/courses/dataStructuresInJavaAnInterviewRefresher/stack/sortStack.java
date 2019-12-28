@@ -5,7 +5,7 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
  * 
  * author Francesco Giordano
  */
-public class sortStack {
+public class SortStack {
 
     public static void sort(myStack stack, int size){
 
@@ -51,7 +51,7 @@ public class sortStack {
         stack.push(60);
         stack.push(23);
 
-        sort(stack, stack.size);
+        SortStack.sort(stack, stack.size);
 
         while (!stack.isEmpty()) {
             System.out.println(stack.pop());

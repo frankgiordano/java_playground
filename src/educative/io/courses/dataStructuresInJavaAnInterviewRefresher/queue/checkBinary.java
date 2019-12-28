@@ -5,7 +5,7 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.queue;
  * 
  * auther: francesco giordano
  */
-class checkBinary {
+public class CheckBinary {
 
     public String[] findBin(int number) {
         myQueue queue = new myQueue(5);
@@ -27,8 +27,7 @@ class checkBinary {
     }
 
     public static void main(String[] args) {
-
-        checkBinary find = new checkBinary();
+        CheckBinary find = new CheckBinary();
 
         String[] result = find.findBin(3);
 

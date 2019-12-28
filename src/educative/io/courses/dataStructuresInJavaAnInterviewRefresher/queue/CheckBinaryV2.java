@@ -7,7 +7,7 @@ import java.util.*;
  * 
  * auther: francesco giordano
  */
-class checkBinary2 {
+public class CheckBinaryV2 {
 
     public String[] findBin(int number) {
         Queue<Integer> queue = new LinkedList<Integer>();
@@ -29,8 +29,7 @@ class checkBinary2 {
     }
 
     public static void main(String[] args) {
-
-        checkBinary find = new checkBinary();
+        CheckBinaryV2 find = new CheckBinaryV2();
 
         String[] result = find.findBin(3);
 

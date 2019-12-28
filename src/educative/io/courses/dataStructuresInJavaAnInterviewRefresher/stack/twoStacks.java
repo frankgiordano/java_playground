@@ -5,14 +5,14 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
  * 
  * author francesco giordano
  */
-public class twoStacks {
+public class TwoStacks {
 
     int size;
     int[] arr;
     int stack1Top;
     int stack2Top;
 
-    public twoStacks(int n) {
+    public TwoStacks(int n) {
         size = n;
         arr = new int[size];
         stack1Top = -1;
@@ -62,8 +62,7 @@ public class twoStacks {
     }
 
     public static void main(String[] args) {
-
-        twoStacks stacks = new twoStacks(5);
+        TwoStacks stacks = new TwoStacks(5);
 
         stacks.push1(1);
         stacks.push1(2);
@@ -84,7 +83,6 @@ public class twoStacks {
         for (int i = 0; i < 3; i++) {
             System.out.println(stacks.pop2());
         }
-
     }
 
 }

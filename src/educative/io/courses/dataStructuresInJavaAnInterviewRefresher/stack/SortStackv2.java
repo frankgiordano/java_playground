@@ -7,7 +7,7 @@ import java.util.Stack;
  * 
  * author Francesco Giordano
  */
-public class sortStack2 {
+public class SortStackv2 {
 
     public static Stack<Integer> sort(Stack<Integer> stack) {
 
@@ -49,7 +49,7 @@ public class sortStack2 {
         stack.add(60);
         stack.add(23);
 
-        stack = sort(stack);
+        stack = SortStackv2.sort(stack);
 
         while (!stack.empty()) {
             System.out.println(stack.pop());

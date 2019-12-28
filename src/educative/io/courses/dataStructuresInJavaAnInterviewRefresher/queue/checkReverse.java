@@ -7,7 +7,7 @@ import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack.mySta
  * 
  * author Francesco Giordano
  */
-class checkReverse {
+public class CheckReverse {
 
     private static myStack stack = new myStack(5);
 
@@ -31,19 +31,17 @@ class checkReverse {
     }
 
     public static void main(String[] args) {
-
         myQueue queue = new myQueue(10);
 
         for (int i = 1; i < 11; i++) {
             queue.enqueue(i);
         }
 
-        checkReverse.reverseK(queue, 5);
+        CheckReverse.reverseK(queue, 5);
 
         for (int i = 1; i < 11; i++) {
             System.out.print(" " + queue.dequeue());
         }
-
     }
 
 }
