@@ -10,9 +10,9 @@ Needed help from https://www.programcreek.com/
 
 author francesco giordano
  */
-public class multiplyStrings {
+public class MultiplyStrings {
 
-    public String multiply(String n1, String n2) {
+    public String multiplyStrings(String n1, String n2) {
 
         // time = O(n + m)
 
@@ -69,7 +69,7 @@ public class multiplyStrings {
     }
 
     public static void main(String[] args) {
-        multiplyStrings multiply = new multiplyStrings();
-        System.out.println(multiply.multiply("123", "456"));
+        MultiplyStrings multiply = new MultiplyStrings();
+        System.out.println(multiply.multiplyStrings("123", "456"));
     }
 }

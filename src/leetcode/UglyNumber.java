@@ -1,6 +1,6 @@
 package leetcode;
 
-class ugly {
+public class UglyNumber {
 
     public static boolean isUgly(int num) {
         if (num == 0)
@@ -27,9 +27,7 @@ class ugly {
     }
     
     public static void main (String[] args) {
-
-        System.out.println(" is ugly = " + isUgly(6));
-
+        System.out.println(" is ugly = " + UglyNumber.isUgly(6));
     }
 
 }

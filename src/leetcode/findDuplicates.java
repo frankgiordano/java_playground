@@ -27,9 +27,11 @@ example [2, 1, 2, 1] = a
     a[1] = -1 is visited meaning less than 0 = duplicsate add to set 
 
     [-2, -1, 2, 1] = a
+
+author francesco giordano
 */
 
-public class findDuplicates {
+public class FindDuplicates {
 
     public static List<Integer> findDups(int[] nums) {
         Set<Integer> result = new HashSet<Integer>();
@@ -48,11 +50,11 @@ public class findDuplicates {
         return new ArrayList(result);
     }
 
-    public static void main (String args[]) {
+    public static void main(String args[]) {
 
         int[] input = {4,3,2,7,8,2,3,1};
 
-        List<Integer> result = findDups(input);
+        List<Integer> result = FindDuplicates.findDups(input);
 
         for (Integer i: result) 
             System.out.print(i + " ");

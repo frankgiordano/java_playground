@@ -1,13 +1,13 @@
 package leetcode;
 
 /*
-Roman to Integer
+https://leetcode.com/problems/roman-to-integer/
 
-See https://leetcode.com/problems/roman-to-integer/
+Roman to Integer
 
 author: francesco giordano
  */
-public class romanToInteger {
+public class RomanToInteger {
 
     public static int romanToInt(String s) {
 
@@ -63,6 +63,6 @@ public class romanToInteger {
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInteger.romanToInt("XXVII"));
+        System.out.println(RomanToInteger.romanToInt("XXVII"));
     }
 }

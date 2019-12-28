@@ -12,7 +12,7 @@ same element twice.
 
 author: francesco giordano
  */
-public class twoSum {
+public class TwoSum {
 
     public static int[] getTwoSum(int[] nums, int target) {
 
@@ -67,13 +67,13 @@ public class twoSum {
     public static void main(String[] args) {
         int[] input = { 2, 7, 11, 15 };
 
-        input = getTwoSum(input, 9);
+        input = TwoSum.getTwoSum(input, 9);
         for (int i : input) {
             System.out.println(i);
         }
         System.out.println();
         int[] input2 = { 3, 2, 4 };
-        input2 = getTwoSum2(input2, 6);
+        input2 = TwoSum.getTwoSum2(input2, 6);
         for (int i : input2) {
             System.out.println(i);
         }

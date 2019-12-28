@@ -12,7 +12,7 @@ import java.util.Queue;
 
 // Given a non-empty array of integers, return the k most frequent elements.
 
-class topKFrequentElements {
+public class TopKFrequentElements {
     
     class ValueStats {
         private Integer key;
@@ -93,7 +93,7 @@ class topKFrequentElements {
     }
 
     public static void main(String[] args) {
-        topKFrequentElements instance = new topKFrequentElements();
+        TopKFrequentElements instance = new TopKFrequentElements();
         int[] input = {1,1,1,2,2,3};
         List<Integer> result = instance.topKFrequent1(input, 2);
         for (Integer r: result)

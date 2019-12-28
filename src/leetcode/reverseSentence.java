@@ -1,17 +1,19 @@
 package leetcode;
 
-public class reverseSentence {
 
-    /*
-     * Given an input string, reverse the string word by word.
-     * 
-     * A word is defined as a sequence of non-space characters. Input string may
-     * contain leading or trailing spaces. However, your reversed string should not
-     * contain leading or trailing spaces. You need to reduce multiple spaces
-     * between two words to a single space in the reversed string.
-     * 
-     * leetcode = 6ms time, 36.4 MB memory
-     */
+/*
+Given an input string, reverse the string word by word.
+
+A word is defined as a sequence of non-space characters. Input string may
+contain leading or trailing spaces. However, your reversed string should not
+contain leading or trailing spaces. You need to reduce multiple spaces
+between two words to a single space in the reversed string.
+
+leetcode = 6ms time, 36.4 MB memory
+
+author francesco giordano
+ */
+public class ReverseSentence {
     public static String reverseWords(String s) {
 
         // if nothing is sent in return an emptry string
@@ -145,10 +147,10 @@ public class reverseSentence {
 
     public static void main(String[] args) {
         String input = "the sky is blue";
-        System.out.println(reverseSentence.reverseWords(input));
-        System.out.println(reverseSentence.reverseWords3(input));
+        System.out.println(ReverseSentence.reverseWords(input));
+        System.out.println(ReverseSentence.reverseWords3(input));
         input = " Hello World! ";
-        System.out.println(reverseSentence.reverseWords(input));
-        System.out.println(reverseSentence.reverseWords3(input));
+        System.out.println(ReverseSentence.reverseWords(input));
+        System.out.println(ReverseSentence.reverseWords3(input));
     }
 }

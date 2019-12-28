@@ -2,7 +2,7 @@ package leetcode;
 
 import java.util.Arrays;
 
-public class findAnagram {
+public class FindAnagram {
 
     public static final int ASCII_NUMS = 256; //  8-bit
 
@@ -81,17 +81,17 @@ public class findAnagram {
 
     public static void main(String[] args) {
 
-        System.out.println(findAnagram.isAnagram1("frank", "frakn"));
-        System.out.println(findAnagram.isAnagram1("frankk", "frakn"));
-        System.out.println(findAnagram.isAnagram1("K", "k"));
+        System.out.println(FindAnagram.isAnagram1("frank", "frakn"));
+        System.out.println(FindAnagram.isAnagram1("frankk", "frakn"));
+        System.out.println(FindAnagram.isAnagram1("K", "k"));
 
-        System.out.println(findAnagram.isAnagram2("frank", "frakn"));
-        System.out.println(findAnagram.isAnagram2("frankk", "frakn"));
-        System.out.println(findAnagram.isAnagram2("K", "k"));
+        System.out.println(FindAnagram.isAnagram2("frank", "frakn"));
+        System.out.println(FindAnagram.isAnagram2("frankk", "frakn"));
+        System.out.println(FindAnagram.isAnagram2("K", "k"));
 
-        System.out.println(findAnagram.isAnagram3("frank", "frakn"));
-        System.out.println(findAnagram.isAnagram3("frankk", "frakn"));
-        System.out.println(findAnagram.isAnagram3("K", "k"));
+        System.out.println(FindAnagram.isAnagram3("frank", "frakn"));
+        System.out.println(FindAnagram.isAnagram3("frankk", "frakn"));
+        System.out.println(FindAnagram.isAnagram3("K", "k"));
     }
 
 }

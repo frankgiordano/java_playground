@@ -19,7 +19,7 @@ If no valid conversion could be performed, a zero value is returned.
 
 author: francesco giordano
 */
-public class myAtoi {
+public class MyAtoi {
     public static int atoi(String str) {
         str = str.trim();
         if (isValid(str) == false)
@@ -112,6 +112,6 @@ public class myAtoi {
     }
 
     public static void main(String[] args) {
-        System.out.println(myAtoi.atoi("-214748-3648"));
+        System.out.println(MyAtoi.atoi("-214748-3648"));
     }
 }

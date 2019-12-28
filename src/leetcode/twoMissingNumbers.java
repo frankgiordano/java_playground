@@ -3,9 +3,10 @@ package leetcode;
 /*
 Given an array containing n distinct numbers taken from 
 0, 1, 2, ..., n, find the two nums that are missing from the array.
-*/
 
-public class twoMissingNumbers {
+author francesco giordano
+*/
+public class TwoMissingNumbers {
 
     public static int[] getTwoMissingNumber(int[] nums) {
         int size = nums.length + 2;  // it is missing two entries add two to total size
@@ -47,10 +48,9 @@ public class twoMissingNumbers {
     public static void main(String[] args) {
         int[] input = {1, 2, 4, 6};
 
-        int[] result = getTwoMissingNumber(input);
+        int[] result = TwoMissingNumbers.getTwoMissingNumber(input);
         for (int i: result)
             System.out.print(i + " ");
     }
-
 
 }
