@@ -15,7 +15,7 @@ and more..
 
 You will also see some short POC code I utilize for work or side projects.. 
 
-You are welcome to peek and hope it may be useful in your journey to become a better coder.  
+You are welcome to take a peek, and I hope it may be useful in your journey to become a better coder.  
 
 
 
