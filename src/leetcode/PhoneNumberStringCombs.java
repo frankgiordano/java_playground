@@ -12,6 +12,8 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 Note that 1 does not map to any letters.
 
 author francesco giordano
+
+This is a classic BFS solution.
  */
 public class PhoneNumberStringCombs {
 
