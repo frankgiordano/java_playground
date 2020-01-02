@@ -39,8 +39,8 @@ public class RemoveDuplicates {
         // space O(1)
         // time O(n)
 
-        // use two point method..
-        // slow and fast pointers.
+        // this is a perfect solution to use the two pointer method..
+        // with slow and fast pointers.
         // fast pointer will exapand and keep on looking ahead until it finds
         // a number not equal to the current slow pointer and this will be
         // non-duplicate.. which at this point perform a replacement of the
