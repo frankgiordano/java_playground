@@ -41,7 +41,7 @@ public class RemoveDuplicates {
 
         // this is a perfect solution to use the two pointer method..
         // with slow and fast pointers.
-        // fast pointer will exapand and keep on looking ahead until it finds
+        // fast pointer will expand and keep on looking ahead until it finds
         // a number not equal to the current slow pointer and this will be
         // non-duplicate.. which at this point perform a replacement of the
         // item at slow++ and search via fast point for the next one.
