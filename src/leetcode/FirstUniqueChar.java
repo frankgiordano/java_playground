@@ -51,12 +51,9 @@ public class FirstUniqueChar {
 
     public static int get2(String s) {
         // this solution is faster than using hashmap
-        // time O(n) + O(n) + O(n) = n + n + n = 3n = O(n)
-        // space O(n)
+        // time O(n) + O(n) + O(n) = n + n = 2n = O(n + 26)
+        // space O(n + 26)
         int[] chars = new int[26];
-
-        for (int i = 0; i < 26; i++)
-            chars[i] = 0;
 
         for (int i = 0; i < s.length(); i++) {
             int index = s.charAt(i) - 'a';
