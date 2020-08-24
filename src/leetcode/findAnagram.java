@@ -64,15 +64,27 @@ public class FindAnagram {
         if (str1.length() != str2.length()) 
             return false;
 
+        int[] countChars = new int[ASCII_NUMS]; 
+        for (int i = 0; i < ASCII_NUMS; i++)
+            countChars[i] = '0';
+
         boolean found = true;
         for (int i = 0; i < str1.length(); i++) {
+            char char1 = str1.charAt(i);
+            if (countChars[char1] != '0') {
+                return false;
+            }
+            countChars[char1] += 1;
             if (!found)
                 return false;
-            for (int j = 0; j < str1.length(); j++) {
-                if (str1.charAt(i) == str2.charAt(j)) {
+            for (int j = 0; j < str2.length(); j++) {
+                char char2 = str2.charAt(j);
+                if (char1 == char2) {
                     found = true;
+                    break;
+                } else {
+                    found = false;
                 }
-                else found = false;
             }
         }
 
@@ -84,14 +96,17 @@ public class FindAnagram {
         System.out.println(FindAnagram.isAnagram1("frank", "frakn"));
         System.out.println(FindAnagram.isAnagram1("frankk", "frakn"));
         System.out.println(FindAnagram.isAnagram1("K", "k"));
-
+        System.out.println();
         System.out.println(FindAnagram.isAnagram2("frank", "frakn"));
         System.out.println(FindAnagram.isAnagram2("frankk", "frakn"));
         System.out.println(FindAnagram.isAnagram2("K", "k"));
-
+        System.out.println();
         System.out.println(FindAnagram.isAnagram3("frank", "frakn"));
         System.out.println(FindAnagram.isAnagram3("frankk", "frakn"));
         System.out.println(FindAnagram.isAnagram3("K", "k"));
+        System.out.println();
+        System.out.println(FindAnagram.isAnagram3("frakk", "frakn"));
+        System.out.println(FindAnagram.isAnagram3("frank", "frakk"));
     }
 
 }
