@@ -47,7 +47,7 @@ public class FindDuplicates {
             }
         }
         
-        return new ArrayList(result);
+        return new ArrayList<>(result);
     }
 
     public static void main(String args[]) {
