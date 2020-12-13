@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
+https://leetcode.com/problems/two-sum/
+1. Two Sum
+
 Given an array of integers, return indices of the two numbers such that they add up to a
 specific target.
 

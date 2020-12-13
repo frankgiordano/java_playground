@@ -4,6 +4,7 @@ import java.util.*;
 
 /*
 https://leetcode.com/problems/employee-importance/
+690. Employee Importance
 
 You are given a data structure of employee information, which includes the employee's
 unique id, his importance value and his direct subordinates' id.
@@ -24,8 +25,7 @@ The maximum number of employees won't exceed 2000.
 author francesco giordano
 
 This is a classic DFS solution.
- */
-
+*/
 class Employee {
     // It's the unique id of each node;
     // unique id of this employee

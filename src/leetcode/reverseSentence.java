@@ -2,14 +2,19 @@ package leetcode;
 
 
 /*
-Given an input string, reverse the string word by word.
+https://leetcode.com/problems/reverse-words-in-a-string/
+151. Reverse Words in a String
 
-A word is defined as a sequence of non-space characters. Input string may
-contain leading or trailing spaces. However, your reversed string should not
-contain leading or trailing spaces. You need to reduce multiple spaces
-between two words to a single space in the reversed string.
+Given an input string s, reverse the order of the words.
 
-leetcode = 6ms time, 36.4 MB memory
+A word is defined as a sequence of non-space characters. The words in s will be 
+separated by at least one space.
+
+Return a string of the words in reverse order concatenated by a single space.
+
+Note that s may contain leading or trailing spaces or multiple spaces between two 
+words. The returned string should only have a single space separating the words. 
+Do not include any extra spaces.
 
 author francesco giordano
  */
