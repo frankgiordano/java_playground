@@ -4,11 +4,12 @@ package playground;
 Take a string with leading alpha characters and trailing numbers and 
 produce a string of the number + 1. 
 
-This was work related and prototype for a method to accomplish a similar task. 
+This was work related and this code was a prototype for a method to 
+accomplish a similar task and then added to my work project.  
 
 author: francesco giordano
 */
-public class NumberUtils {
+public class ExtractNextHighestNumber {
 
     public static String numPlusOne(String str) {
 
@@ -33,7 +34,7 @@ public class NumberUtils {
     }
 
     public static void main(String args[]) {
-        System.out.println(NumberUtils.numPlusOne("d1411"));
+        System.out.println(ExtractNextHighestNumber.numPlusOne("d1411"));
     }
 
 }
