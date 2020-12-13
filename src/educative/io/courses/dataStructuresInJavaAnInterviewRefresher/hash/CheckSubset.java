@@ -18,7 +18,7 @@ class CheckSubset {
         HashSet<Integer> set = new HashSet<Integer>();
         
         for (int value: arr1) {   // O(n)
-            set.add(new Integer(value));
+            set.add(Integer.valueOf(value));
         }
 
         for (int value: arr2) {   // O(m)
