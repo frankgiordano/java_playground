@@ -30,7 +30,6 @@ example [2, 1, 2, 1] = a
 
 author francesco giordano
 */
-
 public class FindDuplicates {
 
     public static List<Integer> findDups(int[] nums) {
