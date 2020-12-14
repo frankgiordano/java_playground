@@ -1,6 +1,5 @@
 package leetcode;
 
-
 /*
 https://leetcode.com/problems/reverse-words-in-a-string/
 151. Reverse Words in a String
@@ -83,15 +82,16 @@ public class ReverseSentence {
         return new String(arr);
     }
 
-    /* 
-    Given an input string, reverse the string word by word.
-
-    A word is defined as a sequence of non-space characters.
-    Input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.
-    You need to reduce multiple spaces between two words to a single space in the reversed string.
-
-    leetcode = 3ms time, 38.2 MB MB memory
-    */
+    /*
+     * Given an input string, reverse the string word by word.
+     * 
+     * A word is defined as a sequence of non-space characters. Input string may
+     * contain leading or trailing spaces. However, your reversed string should not
+     * contain leading or trailing spaces. You need to reduce multiple spaces
+     * between two words to a single space in the reversed string.
+     * 
+     * leetcode = 3ms time, 38.2 MB MB memory
+     */
     public static String reverseWords3(String s) {
 
         if (s == null || s.length() == 0)
@@ -103,9 +103,9 @@ public class ReverseSentence {
         int end = -1;
         int size = arr.length - 1;
 
-        // i variable will hold current index that trasverses the input 
-        // end variable uses i to set the current end index value of 
-        // the current word 
+        // i variable will hold current index that trasverses the input
+        // end variable uses i to set the current end index value of
+        // the current word
         int i = size;
         while (i >= 0) {
 
@@ -120,7 +120,7 @@ public class ReverseSentence {
                 if (end == -1)
                     end = i;
             }
-            
+
             i--;
         }
 

@@ -36,7 +36,7 @@ public class ReverseCharArray {
     public static void reverseString2(char[] s) {
         // time O(n)
         // space O(n)
-        reverse(0, s.length-1, s);
+        reverse(0, s.length - 1, s);
     }
 
     public static void reverse(int index1, int index2, char[] s) {
@@ -49,7 +49,7 @@ public class ReverseCharArray {
     }
 
     public static void main(String args[]) {
-        char[] s = {'h','e','l','l','o'};
+        char[] s = { 'h', 'e', 'l', 'l', 'o' };
         ReverseCharArray.reverseString(s);
         System.out.println(s);
         ReverseCharArray.reverseString2(s);

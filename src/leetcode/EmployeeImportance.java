@@ -45,13 +45,13 @@ public class EmployeeImportance {
         // dont need to use 'visited' here as subordinates wont have duplicates...
 
         emap = new HashMap<Integer, Employee>();
-        for (Employee e: employees)
+        for (Employee e : employees)
             emap.put(e.id, e);
 
         int result = emap.get(id).importance;
 
         Stack<Integer> stack = new Stack<Integer>();
-        for (Integer i: emap.get(id).subordinates)
+        for (Integer i : emap.get(id).subordinates)
             stack.push(i);
 
         while (!stack.empty()) {
@@ -59,8 +59,8 @@ public class EmployeeImportance {
 
             result += emap.get(id).importance;
 
-            for (Integer i: emap.get(id).subordinates) {
-                    stack.push(i);
+            for (Integer i : emap.get(id).subordinates) {
+                stack.push(i);
             }
         }
 
@@ -69,7 +69,7 @@ public class EmployeeImportance {
 
     public int getImportance2(List<Employee> employees, int id) {
         emap = new HashMap<Integer, Employee>();
-        for (Employee e: employees)
+        for (Employee e : employees)
             emap.put(e.id, e);
         int result = dfs(id);
         return result;
@@ -77,7 +77,7 @@ public class EmployeeImportance {
 
     public int dfs(int id) {
         int result = emap.get(id).importance;
-        for (Integer i: emap.get(id).subordinates)
+        for (Integer i : emap.get(id).subordinates)
             result += dfs(i);
         return result;
     }
@@ -88,7 +88,7 @@ public class EmployeeImportance {
         Employee e1 = new Employee();
         e1.id = 1;
         e1.importance = 10;
-        e1.subordinates = Arrays.asList(2,3,4);
+        e1.subordinates = Arrays.asList(2, 3, 4);
         employees.add(e1);
         Employee e2 = new Employee();
         e2.id = 2;

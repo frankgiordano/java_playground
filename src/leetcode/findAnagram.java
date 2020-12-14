@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class FindAnagram {
 
-    public static final int ASCII_NUMS = 256; //  8-bit
+    public static final int ASCII_NUMS = 256; // 8-bit
 
     public static boolean isAnagram1(String str1, String str2) {
 
         // O(n) - time
         // O(n) - space
 
-        if (str1.length() != str2.length()) 
+        if (str1.length() != str2.length())
             return false;
 
         char[] charArray1 = str1.toCharArray();
@@ -23,13 +23,13 @@ public class FindAnagram {
         Arrays.fill(count1, 0);
         Arrays.fill(count2, 0);
 
-        for (int i = 0 ; i < charArray1.length; i++) {
+        for (int i = 0; i < charArray1.length; i++) {
             count1[charArray1[i]] += 1;
             count2[charArray2[i]] += 1;
         }
 
-        for (int i = 0 ; i < ASCII_NUMS; i++) {
-            if (count1[i] != count2[i]) 
+        for (int i = 0; i < ASCII_NUMS; i++) {
+            if (count1[i] != count2[i])
                 return false;
         }
 
@@ -40,18 +40,18 @@ public class FindAnagram {
 
         // O(nlogn) - time
 
-        if (str1.length() != str2.length()) 
+        if (str1.length() != str2.length())
             return false;
 
         char[] charArray1 = str1.toCharArray();
         char[] charArray2 = str2.toCharArray();
-        
+
         Arrays.sort(charArray1);
         Arrays.sort(charArray2);
 
         str1 = String.valueOf(charArray1);
         str2 = String.valueOf(charArray2);
-        if (!str1.equals(str2)) 
+        if (!str1.equals(str2))
             return false;
 
         return true;
@@ -61,10 +61,10 @@ public class FindAnagram {
 
         // O(n * m) - time - brute force
 
-        if (str1.length() != str2.length()) 
+        if (str1.length() != str2.length())
             return false;
 
-        int[] countChars = new int[ASCII_NUMS]; 
+        int[] countChars = new int[ASCII_NUMS];
         for (int i = 0; i < ASCII_NUMS; i++)
             countChars[i] = '0';
 

@@ -43,15 +43,15 @@ public class SortArrayByParity {
 
     public static void output(int[] input) {
         SortArrayByParity.sortArrayByParity(input);
-        for (int i: input)
+        for (int i : input)
             System.out.print(i + " ");
         System.out.println();
     }
 
     public static void main(String[] args) {
-        int[] input = {3, 1, 2, 4};
+        int[] input = { 3, 1, 2, 4 };
         SortArrayByParity.output(SortArrayByParity.sortArrayByParity(input));
-        int[] input2 = {0,1,2};
+        int[] input2 = { 0, 1, 2 };
         SortArrayByParity.output(SortArrayByParity.sortArrayByParity(input2));
     }
 

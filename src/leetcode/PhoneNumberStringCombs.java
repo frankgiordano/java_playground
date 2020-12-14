@@ -170,13 +170,13 @@ public class PhoneNumberStringCombs {
     }
 
     /**
-     * Runtime: 4 ms, faster than 44.70% of Java online submissions for Letter Combinations of a Phone Number.
-     * Memory Usage: 39.6 MB, less than 5.22% of Java online submissions for Letter Combinations of a Phone Number.
+     * Runtime: 4 ms, faster than 44.70% of Java online submissions for Letter
+     * Combinations of a Phone Number. Memory Usage: 39.6 MB, less than 5.22% of
+     * Java online submissions for Letter Combinations of a Phone Number.
      * 
-     * Leetcode reports this method to be the worst of all others. This is due to the fact of:
-     * lst.add(item + values.charAt(j));
-     * instead of 
-     * lst.add(item + Character.toString(values.charAt(j)));
+     * Leetcode reports this method to be the worst of all others. This is due to
+     * the fact of: lst.add(item + values.charAt(j)); instead of lst.add(item +
+     * Character.toString(values.charAt(j)));
      * 
      * high memory and cpu usage due to string + of a char
      */
@@ -215,17 +215,18 @@ public class PhoneNumberStringCombs {
     }
 
     /**
-     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Letter Combinations of a Phone Number.
-     * Memory Usage: 37.7 MB, less than 79.77% of Java online submissions for Letter Combinations of a Phone Number.
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Letter
+     * Combinations of a Phone Number. Memory Usage: 37.7 MB, less than 79.77% of
+     * Java online submissions for Letter Combinations of a Phone Number.
      * 
      * This version using StringBuilder and provides the best leetcode results!
      */
     public static List<String> letterCombinations5(String digits) {
         LinkedList<String> lst = new LinkedList<String>();
-        
+
         if (digits == null || digits.isEmpty())
             return lst;
-        
+
         String[] dialPad = new String[10];
         dialPad[0] = "0";
         dialPad[1] = "1";
@@ -237,14 +238,14 @@ public class PhoneNumberStringCombs {
         dialPad[7] = "pqrs";
         dialPad[8] = "tuv";
         dialPad[9] = "wxyz";
-        
+
         lst.add("");
         for (int i = 0; i < digits.length(); i++) {
             String values = dialPad[Character.getNumericValue(digits.charAt(i))];
-        
+
             while (lst.peek().length() == i) {
                 String item = lst.pop();
-                
+
                 for (int j = 0; j < values.length(); j++) {
                     StringBuilder str = new StringBuilder();
                     str.append(item);
@@ -252,12 +253,12 @@ public class PhoneNumberStringCombs {
                     lst.add(str.toString());
                 }
             }
-        
+
         }
-        
+
         return lst;
     }
-    
+
     public static void main(String[] args) {
         String digits = "9345";
         System.out.println(PhoneNumberStringCombs.letterCombinations1(digits));
@@ -270,5 +271,5 @@ public class PhoneNumberStringCombs {
         digits = "9345";
         System.out.println(PhoneNumberStringCombs.letterCombinations5(digits));
     }
-    
+
 }

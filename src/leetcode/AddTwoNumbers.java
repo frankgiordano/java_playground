@@ -64,8 +64,10 @@ public class AddTwoNumbers {
             value = value % 10;
             pointer.next = new ListNode(value);
             pointer = pointer.next;
-            if (p1 != null) p1 = p1.next;
-            if (p2 != null) p2 = p2.next;
+            if (p1 != null)
+                p1 = p1.next;
+            if (p2 != null)
+                p2 = p2.next;
         }
 
         if (carry > 0) {

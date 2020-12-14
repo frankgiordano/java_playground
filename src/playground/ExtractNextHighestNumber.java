@@ -22,14 +22,14 @@ public class ExtractNextHighestNumber {
             c = str.charAt(--index);
         }
 
-        for (int i = index+1; i < str.length(); i++) 
+        for (int i = index + 1; i < str.length(); i++)
             currNum = currNum * 10 + Character.getNumericValue(str.charAt(i));
 
-        newNum = String.valueOf(currNum+1);
+        newNum = String.valueOf(currNum + 1);
 
-        if (currNum < 9) 
+        if (currNum < 9)
             return "0" + newNum;
-        else 
+        else
             return newNum;
     }
 

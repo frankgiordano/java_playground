@@ -38,19 +38,19 @@ public class CombinationSum {
         }
 
         List<Integer> combinations = new ArrayList<>();
-        
+
         Arrays.sort(input);
 
-        findCombinations(results, input, combinations, target, 0 );
+        findCombinations(results, input, combinations, target, 0);
         return results;
     }
 
-    private static void findCombinations(List<List<Integer>> results, int[] input, List<Integer>
-            combination, int target, int startIndex) {
-        if (target == 0) {    
-          results.add(new ArrayList<>(combination));
-          return;
-        }  
+    private static void findCombinations(List<List<Integer>> results, int[] input, List<Integer> combination,
+            int target, int startIndex) {
+        if (target == 0) {
+            results.add(new ArrayList<>(combination));
+            return;
+        }
 
         for (int i = startIndex; i < input.length; i++) {
             if (input[i] > target)
@@ -60,12 +60,12 @@ public class CombinationSum {
             int newTarget = target - input[i];
             findCombinations(results, input, combination, newTarget, i);
             combination.remove(combination.size() - 1);
-        }            
-    } 
+        }
+    }
 
     public static void main(String[] args) {
 
-        int[] input = { 2, 3, 6, 7};
+        int[] input = { 2, 3, 6, 7 };
         List<List<Integer>> results = combinationSum(input, 7);
         results.forEach(i -> {
             System.out.println(i);

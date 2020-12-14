@@ -20,7 +20,8 @@ author francesco giordano
 public class ReverseInt {
     public static int reverse(int x) {
 
-        if (x < 10 && x > -10) return x; // means one digit sent nothing to reverse
+        if (x < 10 && x > -10)
+            return x; // means one digit sent nothing to reverse
 
         List<Integer> nums = new ArrayList<Integer>();
         int nextInt = 0;
@@ -49,7 +50,8 @@ public class ReverseInt {
     public static int reverse1(int x) {
 
         // means one digit sent nothing to reverse
-        if (x < 10 && x > -10) return x;
+        if (x < 10 && x > -10)
+            return x;
 
         long sum = 0;
         while (x != 0) {

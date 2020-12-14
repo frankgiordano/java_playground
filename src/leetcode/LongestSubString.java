@@ -2,6 +2,7 @@ package leetcode;
 
 import java.util.HashSet;
 import java.util.Set;
+
 /*
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
 3. Longest Substring Without Repeating Characters
@@ -44,7 +45,7 @@ public class LongestSubString {
             characters.clear();
             characters.add(s.charAt(i));
             currLength = 1;
-            for (int j = i+1; j < s.length(); j++) {
+            for (int j = i + 1; j < s.length(); j++) {
                 if (characters.contains(s.charAt(j))) {
                     if (currLength > maxLength) {
                         maxLength = currLength;

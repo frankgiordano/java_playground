@@ -17,24 +17,24 @@ author francesco giordano
  */
 public class RemoveDuplicates {
 
-     public static int removeDuplicates(int[] nums) {
+    public static int removeDuplicates(int[] nums) {
 
-         // space O(n)
-         // time O(n+m)
-         // this is slow compare to the method below
+        // space O(n)
+        // time O(n+m)
+        // this is slow compare to the method below
 
-         LinkedHashSet<Integer> uniqueNums = new LinkedHashSet<Integer>();
-         for (Integer num: nums)
-             uniqueNums.add(num);
+        LinkedHashSet<Integer> uniqueNums = new LinkedHashSet<Integer>();
+        for (Integer num : nums)
+            uniqueNums.add(num);
 
-         Iterator<Integer> itr = uniqueNums.iterator();
-         int index = 0;
-         while (itr.hasNext()) {
-             nums[index++] = itr.next();
-         }
+        Iterator<Integer> itr = uniqueNums.iterator();
+        int index = 0;
+        while (itr.hasNext()) {
+            nums[index++] = itr.next();
+        }
 
-         return index;
-     }
+        return index;
+    }
 
     public static int removeDuplicates2(int[] nums) {
         // space O(1)
@@ -61,17 +61,17 @@ public class RemoveDuplicates {
             fastIndex++;
         }
 
-        return slowIndex+1;
+        return slowIndex + 1;
     }
 
     public static void main(String[] args) {
-        int[] input = {1,1,2,2,3,4,5,5};
+        int[] input = { 1, 1, 2, 2, 3, 4, 5, 5 };
         int len;
         len = RemoveDuplicates.removeDuplicates(input);
         for (int i = 0; i < len; i++)
             System.out.println(input[i]);
         System.out.println();
-        int[] input2 = {1,1,2,2,3,4,5,5};
+        int[] input2 = { 1, 1, 2, 2, 3, 4, 5, 5 };
         len = RemoveDuplicates.removeDuplicates2(input2);
         for (int i = 0; i < len; i++)
             System.out.println(input2[i]);

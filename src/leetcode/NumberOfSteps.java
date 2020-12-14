@@ -22,7 +22,7 @@ author francesco giordano
  */
 public class NumberOfSteps {
 
-    public static int nos (int num) {
+    public static int nos(int num) {
         int count = 0;
         while (num > 0) {
             int result = num % 2;
@@ -35,7 +35,7 @@ public class NumberOfSteps {
         return count;
     }
 
-    public static int nos2 (int num) {
+    public static int nos2(int num) {
         int count = 0;
         while (num > 0) {
             count++;

@@ -19,19 +19,19 @@ public class ValidPalindrome {
             return true;
 
         int i = 0;
-        int j = s.length()-1;
+        int j = s.length() - 1;
 
         while (i <= j) {
 
             char c1 = Character.toLowerCase(s.charAt(i));
             char c2 = Character.toLowerCase(s.charAt(j));
 
-            if (! ((c1 > 96 && c1 < 123) || (c1 > 47 && c1 < 58))) {
+            if (!((c1 > 96 && c1 < 123) || (c1 > 47 && c1 < 58))) {
                 i++;
                 continue;
             }
 
-            if (! ((c2 > 96 && c2 < 123) || (c2 > 47 && c2 < 58))) {
+            if (!((c2 > 96 && c2 < 123) || (c2 > 47 && c2 < 58))) {
                 j--;
                 continue;
             }

@@ -35,28 +35,27 @@ public class FindDuplicates {
 
     public static List<Integer> findDups(int[] nums) {
         Set<Integer> result = new HashSet<Integer>();
-        
-        // [2, 1, 2, 1] 
+
+        // [2, 1, 2, 1]
         for (int i = 0; i < nums.length; i++) {
-             int index = Math.abs(nums[i]) - 1;
+            int index = Math.abs(nums[i]) - 1;
             if (nums[index] < 0) {
-                result.add(Math.abs(nums[i])); 
-            }
-            else {
-                nums[index] = -nums[index];   
+                result.add(Math.abs(nums[i]));
+            } else {
+                nums[index] = -nums[index];
             }
         }
-        
+
         return new ArrayList<>(result);
     }
 
     public static void main(String args[]) {
 
-        int[] input = {4,3,2,7,8,2,3,1};
+        int[] input = { 4, 3, 2, 7, 8, 2, 3, 1 };
 
         List<Integer> result = FindDuplicates.findDups(input);
 
-        for (Integer i: result) 
+        for (Integer i : result)
             System.out.print(i + " ");
     }
 

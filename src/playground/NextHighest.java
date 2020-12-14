@@ -19,7 +19,7 @@ public class NextHighest {
         int[] numbers = new int[length];
 
         numCopy = num;
-        for (int i = length-1; i >= 0; i--) {
+        for (int i = length - 1; i >= 0; i--) {
             int value = numCopy % 10;
             numCopy = numCopy / 10;
             numbers[i] = value;

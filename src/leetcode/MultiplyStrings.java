@@ -28,7 +28,7 @@ public class MultiplyStrings {
         n1 = new StringBuilder(n1).reverse().toString();
         n2 = new StringBuilder(n2).reverse().toString();
 
-        int size = n1.length()+n2.length();
+        int size = n1.length() + n2.length();
         int[] product = new int[size];
         StringBuffer result = new StringBuffer();
 
@@ -48,7 +48,7 @@ public class MultiplyStrings {
         }
 
         // reverse the int array to get th leading zeros to start at index 0
-        for (int i = 0, j = size-1; i < j; i++, j--) {
+        for (int i = 0, j = size - 1; i < j; i++, j--) {
             int temp = product[i];
             product[i] = product[j];
             product[j] = temp;
