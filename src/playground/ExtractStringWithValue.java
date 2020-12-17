@@ -1,8 +1,8 @@
 package playground;
 
 /**
- * POC code snippet I used for a project to extract a parameter with its values in a parameter String list 
- * delimited by comma character.  
+ * POC code snippet I used for a project to extract a parameter with its values
+ * in a parameter String list delimited by comma character.
  */
 public class ExtractStringWithValue {
 
@@ -18,9 +18,9 @@ public class ExtractStringWithValue {
         String subStr = content.substring(index);
         int lastIndex = subStr.length();
         if (subStr.indexOf(DELIMITER) != -1)
-          lastIndex = subStr.indexOf(DELIMITER);
+            lastIndex = subStr.indexOf(DELIMITER);
 
-        return subStr.substring(0, lastIndex);    
+        return subStr.substring(0, lastIndex);
     }
 
     public static void main(String[] args) {
