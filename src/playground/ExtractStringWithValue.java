@@ -6,6 +6,8 @@ package playground;
  */
 public class ExtractStringWithValue {
 
+    public static final String DELIMITER = ",";
+
     public static String getStringWithValue(String parameter, String content) {
 
         if (!parameter.contains("=")) {
@@ -15,8 +17,8 @@ public class ExtractStringWithValue {
         int index = content.indexOf(parameter);
         String subStr = content.substring(index);
         int lastIndex = subStr.length();
-        if (subStr.indexOf(",") != -1)
-          lastIndex = subStr.indexOf(",");
+        if (subStr.indexOf(DELIMITER) != -1)
+          lastIndex = subStr.indexOf(DELIMITER);
 
         return subStr.substring(0, lastIndex);    
     }
