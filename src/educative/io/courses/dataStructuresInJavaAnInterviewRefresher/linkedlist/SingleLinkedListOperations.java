@@ -21,52 +21,46 @@ public class SingleLinkedListOperations {
     }
 
     public static String deleteAtHead(LinkedList list) {
-        if (list.headNode.nextElement != null)
-            list.headNode = list.headNode.nextElement;
+        if (list.isEmpty())
+            return "";
+
+        list.headNode = list.headNode.nextElement;
 
         return elements(list);
     }
 
-    public static boolean delete(LinkedList list, int value) {
-        boolean delete = false;
+    public static boolean deleteByValue(LinkedList list, int value) {
         Node finger = list.headNode;
 
         if (finger == null)
-            return delete;
+            return false;
 
         Node previousNode = null;
-
         while (finger != null && finger.data != value) {
             previousNode = finger;
             finger = finger.nextElement;
         }
 
         if (finger == null)
-            return delete;
+            return false;
 
         // at this point it was found
-        delete = true;
         previousNode.nextElement = finger.nextElement;
-        finger = null;
-
-        return delete;
+        return true;
     }
 
-    public static boolean delete2(LinkedList list, int value) {
+    public static boolean deleteByValue2(LinkedList list, int value) {
         boolean delete = false;
         Node finger = list.headNode;
 
         if (finger == null)
-            return delete;
+            return false;
 
         Node previousNode = null;
-
         while (finger != null) {
-
             if (finger.data == value) {
                 delete = true;
                 previousNode.nextElement = finger.nextElement;
-                finger = null;
                 break;
             }
 
@@ -96,7 +90,6 @@ public class SingleLinkedListOperations {
     }
 
     public static boolean detectLoop(LinkedList list) {
-
         Set<Node> visitedNodes = new HashSet<Node>();
         Node finger = list.headNode.nextElement;
 
@@ -112,7 +105,6 @@ public class SingleLinkedListOperations {
     }
 
     public static int findMid(LinkedList list) {
-
         Node finger = list.headNode.nextElement;
         Node mid = finger;
 
@@ -132,7 +124,6 @@ public class SingleLinkedListOperations {
     }
 
     public static String removeDuplicates(LinkedList list) {
-
         Set<Integer> visitedNodes = new HashSet<Integer>();
         Node finger = list.headNode.nextElement;
         Node prev = null;
@@ -154,7 +145,6 @@ public class SingleLinkedListOperations {
     }
 
     public static String reverse(LinkedList list) {
-
         Node curr = list.headNode.nextElement;
         Node next = curr.nextElement;
         Node prev = null;
@@ -172,7 +162,6 @@ public class SingleLinkedListOperations {
     }
 
     public static String union(LinkedList list1, LinkedList list2) {
-
         Set<Integer> visitedNodes = new HashSet<Integer>();
         Node finger1 = list1.headNode.nextElement;
         Node finger2 = list2.headNode.nextElement;
@@ -203,7 +192,6 @@ public class SingleLinkedListOperations {
     }
 
     public static String intersection(LinkedList list1, LinkedList list2) {
-
         String result = "";
         Set<Integer> visitedNodes = new HashSet<Integer>();
         LinkedList newList = new LinkedList();
@@ -274,7 +262,6 @@ public class SingleLinkedListOperations {
 
     // Helper Function to convert List elements in a single string
     public static String elements(LinkedList list) {
-
         String elementsList = "";
 
         Node start = list.headNode.nextElement;
@@ -318,12 +305,12 @@ public class SingleLinkedListOperations {
 
         System.out.println("Found 3 in list1 = " + SingleLinkedListOperations.searchNode(list, 3));
         System.out.println("Found 13 in list1 = " + SingleLinkedListOperations.searchNode(list, 13));
-        System.out.println("delete 4 in list1 = " + SingleLinkedListOperations.delete(list, 4));
+        System.out.println("delete 4 in list1 = " + SingleLinkedListOperations.deleteByValue(list, 4));
         list.printList();
-        System.out.println("delete 4 in list1 = " + SingleLinkedListOperations.delete(list, 4));
-        System.out.println("delete 2 in list1 = " + SingleLinkedListOperations.delete2(list, 2));
+        System.out.println("delete 4 in list1 = " + SingleLinkedListOperations.deleteByValue(list, 4));
+        System.out.println("delete 2 in list1 = " + SingleLinkedListOperations.deleteByValue2(list, 2));
         list.printList();
-        System.out.println("delete 2 in list1 = " + SingleLinkedListOperations.delete2(list, 2));
+        System.out.println("delete 2 in list1 = " + SingleLinkedListOperations.deleteByValue2(list, 2));
         System.out.println("delete head in list1 = " + SingleLinkedListOperations.deleteAtHead(list));
         list.printList();
         System.out.println("size of list1 = " + SingleLinkedListOperations.length(list));
