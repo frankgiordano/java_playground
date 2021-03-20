@@ -40,14 +40,14 @@ public class CheckSum {
     }
 
     public static void main(String[] args) {
-        int[] input = { 1, 2, 3, 4,78, 99, 98, 2 };
-        int[] result = CheckSum.findSum(input, 100);
+        int[] arr = { 1, 2, 3, 4,78, 99, 98, 2 };
+        arr = CheckSum.findSum(arr, 100);
         // arr = 1, 2, 3, 4, 78, 99
         // n = 100
         // 100 - arr[0] 1 == 99, is 99 in arr ? yes
         // return arr[0] and 99 in hashset..
-        for (int i = 0; i < result.length; i++)
-            System.out.println(result[i]);
+        for (int i = 0; i < arr.length; i++)
+            System.out.println(arr[i]);
     }
 
 
