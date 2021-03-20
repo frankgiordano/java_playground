@@ -1,8 +1,5 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /*
 * Challenge 3: Find Two Numbers that Add up to "n"
 * 
@@ -12,26 +9,26 @@ import java.util.Set;
 */
 public class CheckSum {
 
-    public static int[] findSum(int[] arr, int n) { // n + n = O(n)
-
+    public static int[] findSum(int[] arr, int n) {
+        // brute force O(n2)
+        // arr = 1, 2, 3, 4, 78, 99
+        // n = 100
+        // 100 - 1 = 99 check for 99 in arr in outer loop
+        // if found then arr[i] and arr[j] added to result and return
         if (arr == null)
             return null;
 
         int[] result = new int[2];
-        Set<Integer> values = new HashSet<Integer>();
 
-        for (int i = 0; i < arr.length; i++) {   // O(n)
-            values.add(arr[i]);
-        }
-
-        for (int i = 0; i < arr.length; i++) {   // O(n)
-            int value = n - arr[i];
-            if (values.contains(value)) {  
-                result[0] = arr[i];
-                result[1] = value;
-                return result;
+        for (int i = 0; i < arr.length; i++) {
+            int difference = n - arr[i];
+            for (int j = 0; j < arr.length; j++) {
+                if (difference == arr[j]) {
+                    result[0] = arr[i];
+                    result[1] = arr[j];
+                    return result;
+                }
             }
-
         }
         
         return result;
