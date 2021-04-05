@@ -13,8 +13,10 @@ public class Tests {
         btree.insert(10);
         btree.insert(8);
 
-        System.out.println("Found 2 " + (btree.search(2).getData() == 2));
-        System.out.println("Found 21 " + (btree.search(2).getData() == 21));
+        System.out.println("Found 2 " +
+                (btree.search(2) != null ? (btree.search(2).getData() == 2) : "false"));
+        System.out.println("Found 21 " +
+                (btree.search(21) != null ? (btree.search(21).getData() == 21) : "false"));
     }
 
 }
