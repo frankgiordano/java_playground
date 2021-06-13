@@ -32,12 +32,15 @@ public class FirstUniqueChar {
         // time O(n)
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (letters.containsKey(c)) {
-                int count = letters.get(c);
-                letters.put(c, ++count);
-            } else {
-                letters.put(c, 1);
-            }
+
+            // lets use the java 8 way!!
+            letters.compute(c, (k, v) -> (v == null) ? 1 : ++v);
+            // if (letters.containsKey(c)) {
+            //     int count = letters.get(c);
+            //     letters.put(c, ++count);
+            // } else {
+            //     letters.put(c, 1);
+            // }
         }
 
         // time O(n)
