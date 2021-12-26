@@ -1,4 +1,4 @@
-package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.circularlinkedlist;
+package playground;
 
 public class CircularLinkedList<T> {
 
@@ -12,14 +12,31 @@ public class CircularLinkedList<T> {
         }
     }
 
+    private int max = 500;
+    public int size = 0;
     public Node<T> head = null;
     public Node<T> tail = null;
     public Node<T> currNode = null;
+
+    public CircularLinkedList(int max) {
+        this.max = max;
+    }
+
+    public CircularLinkedList() {
+    }
 
     // this function will add the new node at the end of the list.
     public void add(T data) {
         // create new node
         Node<T> newNode = new Node<>(data);
+
+        if (size == max) {
+            // set the new head pointer
+            head = head.next;
+            setTail(newNode);
+            return;
+        }
+
         // checks if the list is empty.
         if (head == null) {
             // if list is empty, head, prev and tail would point to new node.
@@ -27,19 +44,9 @@ public class CircularLinkedList<T> {
             tail = newNode;
             newNode.next = head;
         } else {
-            // tail will point to new node.
-            tail.next = newNode;
-            // hold a temp reference to current tail node
-            var temp = tail;
-            // new node will become new tail.
-            tail = newNode;
-            // since, it is circular linked list tail will point to head.
-            tail.next = head;
-            // link to previous tail node
-            tail.prev = temp;
-            // circular double linked
-            head.prev = tail;
+            setTail(newNode);
         }
+        size++;
     }
 
     public T forward() {
@@ -66,7 +73,7 @@ public class CircularLinkedList<T> {
 
     // displays all the nodes in the list
     public void display() {
-        Node current = head;
+        Node<T> current = head;
         if (head == null) {
             System.out.println("List is empty");
         } else {
@@ -81,7 +88,7 @@ public class CircularLinkedList<T> {
     }
 
     public void displayReverse() {
-        Node current = tail;
+        Node<T> current = tail;
         if (tail == null) {
             System.out.println("List is empty");
         } else {
@@ -95,32 +102,38 @@ public class CircularLinkedList<T> {
         }
     }
 
+    private void setTail(Node<T> newNode) {
+        // tail will point to new node.
+        tail.next = newNode;
+        // hold a temp reference to current tail node
+        var temp = tail;
+        // new node will become new tail.
+        tail = newNode;
+        // circular tail will point to new head.
+        tail.next = head;
+        // link to previous tail node
+        tail.prev = temp;
+        // circular double linked
+        head.prev = tail;
+    }
+
     public static void main(String[] args) {
-        CircularLinkedList cl = new CircularLinkedList<Integer>();
+        CircularLinkedList<Integer> cl = new CircularLinkedList<>();
 
-        cl.add(1);
-        cl.add(2);
-        cl.add(3);
-        cl.add(4);
-        cl.add(5);
-        cl.add(6);
-        cl.add(7);
-
+        cl.fillList(cl, 10);
         cl.display();
         cl.displayReverse();
 
-        System.out.println(cl.forward());
-        System.out.println(cl.forward());
-        System.out.println(cl.forward());
-        System.out.println(cl.forward());
-        System.out.println(cl.back());
-        System.out.println(cl.back());
-        System.out.println(cl.back());
-        System.out.println(cl.back());
-        System.out.println(cl.back());
-        System.out.println(cl.back());
-        System.out.println(cl.back());
-        System.out.println(cl.back());
+        cl = new CircularLinkedList<>(5);
+
+        cl.fillList(cl, 7);
+        cl.display();
+        cl.displayReverse();
+    }
+
+    private void fillList(CircularLinkedList<Integer> cl, int size) {
+        for (int i = 0; i < size; i++)
+            cl.add(i);
     }
 
 }
