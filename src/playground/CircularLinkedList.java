@@ -1,5 +1,9 @@
 package playground;
 
+/**
+ * Used this circular list to implement a command history list for my project
+ * https://github.com/frankgiordano/ZosShell
+ */
 public class CircularLinkedList<T> {
 
     public static class Node<T> {
