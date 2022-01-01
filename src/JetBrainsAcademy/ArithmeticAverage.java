@@ -16,17 +16,17 @@ import java.util.List;
  *
  * Remember that the int type cannot contain fractions. Use a double variable to store the precise result
  * of the division.
- * 
+ *
  * author: frank giordano
  */
 public class ArithmeticAverage {
 
-    public static double solution1(String input) {
+    public static double solution1(String input) throws Exception {
         String[] inputs = input.split(" ");
         int size = inputs.length;
 
-        if (size == 1 || size > 3)
-            System.out.println("enter two numbers only, try again...");
+        if (size == 1 || size > 2)
+            throw new Exception("Provided a string without two numbers only, try again...");
 
         int num1 = Integer.parseInt(inputs[0]);
         int num2 = Integer.parseInt(inputs[1]);
@@ -44,12 +44,12 @@ public class ArithmeticAverage {
         return Double.valueOf(stats.getAverage());
     }
 
-    public static double solution2(String input) {
+    public static double solution2(String input) throws Exception {
         String[] inputs = input.split(" ");
         int size = inputs.length;
 
-        if (size == 1 || size > 3)
-            System.out.println("enter two numbers only, try again...");
+        if (size == 1 || size > 2)
+            throw new Exception("Provided a string without two numbers only, try again...");
 
         int num1 = Integer.parseInt(inputs[0]);
         int num2 = Integer.parseInt(inputs[1]);
@@ -71,9 +71,19 @@ public class ArithmeticAverage {
         return sum / nums.size();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(ArithmeticAverage.solution1("3 10"));
         System.out.println(ArithmeticAverage.solution2("3 10"));
+        try {
+            System.out.println(ArithmeticAverage.solution2("3"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            System.out.println(ArithmeticAverage.solution2("3 10 30"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
