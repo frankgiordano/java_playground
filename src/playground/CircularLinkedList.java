@@ -1,15 +1,15 @@
 package playground;
 
 /**
- * Used this circular list to implement a command history list for my project
+ * Used this circular double linked list to implement a command history list for the following project
  * https://github.com/frankgiordano/ZosShell
  */
 public class CircularLinkedList<T> {
 
     public static class Node<T> {
-        final T data;
-        Node<T> next;
-        Node<T> prev;
+        public final T data;
+        public Node<T> next;
+        public Node<T> prev;
 
         public Node(T data) {
             this.data = data;
@@ -29,7 +29,7 @@ public class CircularLinkedList<T> {
     public CircularLinkedList() {
     }
 
-    // this function will add the new node at the end of the list.
+    // this function will add the new node at the end of the list
     public void add(T data) {
         // create new node
         Node<T> newNode = new Node<>(data);
@@ -41,9 +41,9 @@ public class CircularLinkedList<T> {
             return;
         }
 
-        // checks if the list is empty.
+        // checks if the list is empty
         if (head == null) {
-            // if list is empty, head, prev and tail would point to new node.
+            // if list is empty, head, prev and tail would point to new node
             head = newNode;
             tail = newNode;
             newNode.next = head;
@@ -107,18 +107,24 @@ public class CircularLinkedList<T> {
     }
 
     private void setTail(Node<T> newNode) {
-        // tail will point to new node.
+        // tail will point to new node
         tail.next = newNode;
         // hold a temp reference to current tail node
         var temp = tail;
-        // new node will become new tail.
+        // new node will become new tail
         tail = newNode;
-        // circular tail will point to new head.
+        // circular tail will point to new head
         tail.next = head;
         // link to previous tail node
         tail.prev = temp;
         // circular double linked
         head.prev = tail;
+    }
+
+    // Helper to fill list with values from zero to size...
+    private void fillList(CircularLinkedList<Integer> cl, int size) {
+        for (int i = 0; i < size; i++)
+            cl.add(i);
     }
 
     public static void main(String[] args) {
@@ -133,11 +139,6 @@ public class CircularLinkedList<T> {
         cl.fillList(cl, 7);
         cl.display();
         cl.displayReverse();
-    }
-
-    private void fillList(CircularLinkedList<Integer> cl, int size) {
-        for (int i = 0; i < size; i++)
-            cl.add(i);
     }
 
 }
