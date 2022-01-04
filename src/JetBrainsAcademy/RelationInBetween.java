@@ -10,8 +10,11 @@ package JetBrainsAcademy;
  */
 public class RelationInBetween {
 
-    public static boolean solution1(String input) {
+    public static boolean solution1(String input) throws Exception {
         String[] inputs = input.split(" ");
+
+        if (inputs.length > 3 || input.length() <= 2)
+            throw new Exception("Enter three values");
 
         try {
             if (Integer.parseInt(inputs[0]) > 0 &&
@@ -38,7 +41,7 @@ public class RelationInBetween {
         return false;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(RelationInBetween.solution1("1 1 1"));
         System.out.println(RelationInBetween.solution1("4 3 3"));
         System.out.println(RelationInBetween.solution1("4 -3 -3"));
