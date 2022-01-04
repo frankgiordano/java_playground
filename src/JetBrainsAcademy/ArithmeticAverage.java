@@ -68,10 +68,12 @@ public class ArithmeticAverage {
             sum += num;
         }
 
-        return sum / nums.size();
+        return (double) sum / (double) nums.size();
     }
 
     public static void main(String[] args) throws Exception {
+        System.out.println(ArithmeticAverage.solution1("-5 12"));
+        System.out.println(ArithmeticAverage.solution2("-5 12"));
         System.out.println(ArithmeticAverage.solution1("3 10"));
         System.out.println(ArithmeticAverage.solution2("3 10"));
         try {
