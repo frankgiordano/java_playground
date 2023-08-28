@@ -6,9 +6,9 @@ import java.util.*;
 
 public class TopKFrequentElements {
 
-    class ValueStats {
-        private Integer key;
-        private Integer count;
+    static class ValueStats {
+        private final Integer key;
+        private final Integer count;
 
         public ValueStats(Integer key, Integer count) {
             this.key = key;
@@ -22,15 +22,16 @@ public class TopKFrequentElements {
         public Integer getCount() {
             return this.count;
         }
+
     }
 
     public List<Integer> topKFrequent1(int[] nums, int k) {
 
         // this is O(nlogn) it can be done faster
 
-        List<Integer> result = new ArrayList<Integer>();
-        Map<Integer, Integer> frequency = new HashMap<Integer, Integer>();
-        Queue<ValueStats> queue = new PriorityQueue<ValueStats>(Comparator.comparing(ValueStats::getCount).reversed());
+        List<Integer> result = new ArrayList<>();
+        Map<Integer, Integer> frequency = new HashMap<>();
+        Queue<ValueStats> queue = new PriorityQueue<>(Comparator.comparing(ValueStats::getCount).reversed());
 
         for (int num : nums) {
             if (frequency.containsKey(num)) {
@@ -42,23 +43,23 @@ public class TopKFrequentElements {
         }
 
         for (Map.Entry<Integer, Integer> entry : frequency.entrySet()) {
-            System.out.println("Item : " + entry.getKey() + " Count : " + entry.getValue());
             queue.add(new ValueStats(entry.getKey(), entry.getValue()));
         }
 
-        for (int i = 0; i < k; i++)
+        for (int i = 0; i < k; i++) {
             result.add(queue.poll().getKey());
+        }
 
         return result;
     }
 
     public List<Integer> topKFrequent2(int[] nums, int k) {
 
-        // this is O(nlogk) slightly better
+        // this is O(n log k) slightly better
 
         List<Integer> result = new LinkedList<>();
         Map<Integer, Integer> frequency = new HashMap<>();
-        Queue<Integer> queue = new PriorityQueue<Integer>((n1, n2) -> frequency.get(n1) - frequency.get(n2));
+        Queue<Integer> queue = new PriorityQueue<>(Comparator.comparingInt(frequency::get));
 
         for (int num : nums) {
             if (frequency.containsKey(num)) {
@@ -71,12 +72,14 @@ public class TopKFrequentElements {
 
         for (int n : frequency.keySet()) {
             queue.add(n);
-            if (queue.size() > k)
+            if (queue.size() > k) {
                 queue.poll();
+            }
         }
 
-        while (k-- > 0)
+        while (k-- > 0) {
             result.add(queue.poll());
+        }
         Collections.reverse(result);
 
         return result;
@@ -86,12 +89,15 @@ public class TopKFrequentElements {
         TopKFrequentElements instance = new TopKFrequentElements();
         int[] input = {1, 1, 1, 2, 2, 3};
         List<Integer> result = instance.topKFrequent1(input, 2);
-        for (Integer r : result)
+        for (Integer r : result) {
             System.out.print(r + " ");
+        }
         System.out.println();
-        result = instance.topKFrequent2(input, 2);
-        for (Integer r : result)
+        int[] input2 = {1, 1, 1, 2, 2, 3, 3, 3, 3};
+        result = instance.topKFrequent2(input2, 2);
+        for (Integer r : result) {
             System.out.print(r + " ");
+        }
     }
 
 }

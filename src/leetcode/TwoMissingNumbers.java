@@ -45,7 +45,7 @@ public class TwoMissingNumbers {
     public static void main(String[] args) {
         int[] input = {1, 2, 4, 6};
         int[] result = TwoMissingNumbers.getTwoMissingNumber(input);
-        
+
         for (int i : result)
             System.out.print(i + " ");
     }
