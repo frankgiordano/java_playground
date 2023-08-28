@@ -22,38 +22,37 @@ author francesco giordano
  */
 public class NumberOfSteps {
 
-    public static int nos(int num) {
-        int count = 0;
+    public static int numOfReduceSteps(int num) {
+        int count = 1;
         while (num > 0) {
             int result = num % 2;
-            if (result == 0)
+            if (result == 0) {
                 num = num / 2;
-            if (result != 0)
+            }
+            if (result != 0) {
                 num = num - 1;
+            }
             count++;
         }
         return count;
     }
 
-    public static int nos2(int num) {
-        int count = 0;
+    public static int numOfReduceSteps2(int num) {
+        int count = 1;
         while (num > 0) {
             count++;
             if (num % 2 == 0) {
                 num = num / 2;
                 continue;
             }
-            if (num % 2 != 0) {
-                num = num - 1;
-                continue;
-            }
+            num = num - 1;
         }
         return count;
     }
 
     public static void main(String[] args) {
-        System.out.println(NumberOfSteps.nos(14));
-        System.out.println(NumberOfSteps.nos2(14));
+        System.out.println(NumberOfSteps.numOfReduceSteps(14));
+        System.out.println(NumberOfSteps.numOfReduceSteps2(14));
     }
 
 }
