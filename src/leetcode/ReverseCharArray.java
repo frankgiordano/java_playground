@@ -19,9 +19,9 @@ public class ReverseCharArray {
     public static void reverseString(char[] s) {
         // time O(n)
         // space O(1)
-
-        if (s == null)
+        if (s == null) {
             return;
+        }
 
         int index1 = 0;
         int index2 = s.length - 1;
@@ -39,9 +39,10 @@ public class ReverseCharArray {
         reverse(0, s.length - 1, s);
     }
 
-    public static void reverse(int index1, int index2, char[] s) {
-        if (index1 > index2)
+    private static void reverse(int index1, int index2, char[] s) {
+        if (index1 > index2) {
             return;
+        }
         char c = s[index1];
         s[index1++] = s[index2];
         s[index2--] = c;
@@ -51,7 +52,9 @@ public class ReverseCharArray {
     public static void main(String args[]) {
         char[] s = {'h', 'e', 'l', 'l', 'o'};
         ReverseCharArray.reverseString(s);
+        // output is olleh
         System.out.println(s);
+        // output is hello, s is reversed back to its original state
         ReverseCharArray.reverseString2(s);
         System.out.println(s);
     }

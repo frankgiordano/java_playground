@@ -18,7 +18,7 @@ integer overflows.
 author francesco giordano
  */
 public class ReverseInt {
-    
+
     public static int reverse(int x) {
 
         // means one digit sent nothing to reverse
