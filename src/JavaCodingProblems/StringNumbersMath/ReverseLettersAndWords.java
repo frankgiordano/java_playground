@@ -15,8 +15,8 @@ public class ReverseLettersAndWords {
         String[] words = str.split(" ");
         StringBuilder reverseString = new StringBuilder();
 
-        for (String word: words) {
-            StringBuilder reverseWord = new StringBuilder(); 
+        for (String word : words) {
+            StringBuilder reverseWord = new StringBuilder();
             for (int j = word.length() - 1; j >= 0; j--) {
                 reverseWord.append(word.charAt(j));
             }
@@ -29,8 +29,8 @@ public class ReverseLettersAndWords {
     // java 8 style!
     public static String solution2(String str) {
         return PATTERN.splitAsStream(str)  // split string and stream the words
-                    .map(w -> new StringBuilder(w).reverse())  // for each word reverse it
-                    .collect(Collectors.joining(" ")); // take the map result and append to collection string
+                .map(w -> new StringBuilder(w).reverse())  // for each word reverse it
+                .collect(Collectors.joining(" ")); // take the map result and append to collection string
     }
 
     /// even shortly and this one reserves the order of the words..
@@ -46,15 +46,15 @@ public class ReverseLettersAndWords {
         String[] reverseWords = new String[words.length];
 
         int index = words.length - 1;
-        for (String word: words) {
-            StringBuilder reverseWord = new StringBuilder(); 
+        for (String word : words) {
+            StringBuilder reverseWord = new StringBuilder();
             for (int j = word.length() - 1; j >= 0; j--) {
                 reverseWord.append(word.charAt(j));
             }
             reverseWords[index--] = reverseWord.toString();
         }
 
-        for (String word: reverseWords) {
+        for (String word : reverseWords) {
             reverseString.append(word + " ");
         }
 

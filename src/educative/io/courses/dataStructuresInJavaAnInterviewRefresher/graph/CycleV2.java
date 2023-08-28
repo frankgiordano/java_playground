@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 /*
-* Cycle Detection in the Graph
-*
-* authro francesco giordano
-*/
+ * Cycle Detection in the Graph
+ *
+ * authro francesco giordano
+ */
 
 public class CycleV2 {
 
@@ -16,7 +16,7 @@ public class CycleV2 {
         boolean result = false;
         Stack<Integer> stack = new Stack<Integer>();
         boolean[] visited = new boolean[graph.number_of_vertices];
-        ArrayList<Integer> edges; 
+        ArrayList<Integer> edges;
 
         for (int i = 0; i < graph.number_of_vertices; i++)
             visited[i] = false;
@@ -29,7 +29,7 @@ public class CycleV2 {
             int curr_val = stack.pop();
 
             edges = graph.getNeighbors(curr_val);
-            for (Integer edge: edges) {
+            for (Integer edge : edges) {
                 if (edge == source) {
                     result = true;
                     break;

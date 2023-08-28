@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * Sort values in Stack
- * 
+ * <p>
  * author Francesco Giordano
  */
 public class SortStackV2 {
@@ -38,7 +38,7 @@ public class SortStackV2 {
         return tempStack;
     }
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
         Stack<Integer> stack = new Stack<Integer>();
         stack.add(2);
         stack.add(97);

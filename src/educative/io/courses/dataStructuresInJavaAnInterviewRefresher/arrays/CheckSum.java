@@ -1,12 +1,12 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 
 /*
-* Challenge 3: Find Two Numbers that Add up to "n"
-* 
-* Given an array and a number "n", find two numbers from the array that sums up to "n". 
-* 
-* author: francesco giordano
-*/
+ * Challenge 3: Find Two Numbers that Add up to "n"
+ *
+ * Given an array and a number "n", find two numbers from the array that sums up to "n".
+ *
+ * author: francesco giordano
+ */
 public class CheckSum {
 
     public static int[] findSum(int[] arr, int n) {
@@ -30,14 +30,14 @@ public class CheckSum {
                 }
             }
         }
-        
+
         return result;
     }
 
     public static void main(String[] args) {
         int[] arr = {1, 21, 3, 14, 5, 60, 7, 6};
         arr = CheckSum.findSum(arr, 27);
-        for (int num: arr) {
+        for (int num : arr) {
             System.out.print(num + " ");
         }
 

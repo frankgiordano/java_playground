@@ -3,9 +3,9 @@ package JetBrainsAcademy;
 /**
  * Write a program that reads three integer numbers and prints true if the first number is between the second
  * and the third one (inclusive). Otherwise, it must print false.
- *
+ * <p>
  * The last two arguments may not be sorted.
- *
+ * <p>
  * author: frank giordano
  */
 public class RelationInBetween {

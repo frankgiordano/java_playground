@@ -35,7 +35,7 @@ public class CheckUnionIntersection {
         }
         return result;
     }
-    
+
     //performs intersection between list
     public static <T> SinglyLinkedList<T> intersectionWithHashing(SinglyLinkedList<T> list1, SinglyLinkedList<T> list2) {
         SinglyLinkedList<T> result = new SinglyLinkedList<T>();
@@ -92,7 +92,7 @@ public class CheckUnionIntersection {
             node = node.nextNode;
         }
         System.out.println("->null");
-            
+
     }
 
 }

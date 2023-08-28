@@ -15,7 +15,7 @@ public class CheckNumEdgesV2 {
         }
 
         // graph is undirect hence divide by 2
-        return count/2;
+        return count / 2;
     }
 
     public static void main(String[] args) {

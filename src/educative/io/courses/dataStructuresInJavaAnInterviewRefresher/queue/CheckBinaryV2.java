@@ -1,10 +1,11 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.queue;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Generate Binary Numbers from 1 to n using a Queue
- * 
+ * <p>
  * auther: francesco giordano
  */
 public class CheckBinaryV2 {

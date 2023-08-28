@@ -2,12 +2,12 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
 
 /**
  * Sort values in Stack
- * 
+ * <p>
  * author Francesco Giordano
  */
 public class SortStack {
 
-    public static void sort(myStack stack, int size){
+    public static void sort(myStack stack, int size) {
 
         myStack tempStack = new myStack(size);
 
@@ -40,7 +40,7 @@ public class SortStack {
         }
     }
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
         myStack stack = new myStack(7);
         stack.push(2);

@@ -44,7 +44,7 @@ public class CheckLarge {
             int right = (2 * index) + 2;
 
             if (left < heapSize && heapArr[left] > heapArr[max])
-            max = left;
+                max = left;
 
             if (right < heapSize && heapArr[right] > heapArr[max])
                 max = right;
@@ -62,8 +62,8 @@ public class CheckLarge {
 
     public static void main(String[] args) {
 
-        int[] heapArray = { 56, 12, 9, 8, 7, 4, 3, 2, 1 };
-        int[] heapArray2 = { 9, 4, 7, 1, -2, 6, 5 };
+        int[] heapArray = {56, 12, 9, 8, 7, 4, 3, 2, 1};
+        int[] heapArray2 = {9, 4, 7, 1, -2, 6, 5};
 
         System.out.println("Array = " + Arrays.toString(heapArray));
         int[] result = CheckLarge.findKSmallest(heapArray, 3);

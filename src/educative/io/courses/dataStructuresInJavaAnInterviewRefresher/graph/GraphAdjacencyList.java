@@ -6,10 +6,10 @@ import java.util.Map;
 
 /**
  * undirected graph
- * 
+ * <p>
  * this class uses java's map and arraylist to represent the graph instead of custom build array and linked list from the
  * other example..
- * 
+ * <p>
  * author: francesco giordano
  */
 
@@ -25,8 +25,8 @@ public class GraphAdjacencyList {
         }
     }
 
-    public void addEdge(int source, int destination) {      
-        int size = number_of_vertices - 1; 
+    public void addEdge(int source, int destination) {
+        int size = number_of_vertices - 1;
         if (source > size || destination > size)
             return;
 
@@ -36,7 +36,7 @@ public class GraphAdjacencyList {
     }
 
     public ArrayList<Integer> getNeighbors(int vertice) {
-        int size = number_of_vertices - 1; 
+        int size = number_of_vertices - 1;
         if (vertice > size)
             return null;
         return this.adjListMap.get(vertice);
@@ -56,7 +56,7 @@ public class GraphAdjacencyList {
         for (int i = 0; i < graph.number_of_vertices; i++) {
             System.out.print(i + "=>");
             ArrayList<Integer> edges = graph.getNeighbors(i);
-            for (Integer edge: edges) {
+            for (Integer edge : edges) {
                 System.out.print(edge);
             }
             System.out.println();

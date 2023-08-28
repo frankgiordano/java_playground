@@ -18,12 +18,12 @@ public class Heap {
             Heap.maxHeapify(arr, i, size);
         }
 
-    } 
+    }
 
     public static void buildMinHeap(int[] arr) {
         int size = arr.length;
 
-        for (int i = (size -1) / 2; i >= 0; i--) {
+        for (int i = (size - 1) / 2; i >= 0; i--) {
             Heap.minHeapify(arr, i, size);
         }
     }
@@ -85,8 +85,8 @@ public class Heap {
     }
 
     public static void main(String[] args) {
-        int[] heapArray1 = { 1, 2, 3, 4, 7, 8, 9, 12, 56 };
-        int[] heapArray2 = { 56, 12, 9, 8, 7, 4, 3, 2, 1 };
+        int[] heapArray1 = {1, 2, 3, 4, 7, 8, 9, 12, 56};
+        int[] heapArray2 = {56, 12, 9, 8, 7, 4, 3, 2, 1};
 
         System.out.println("Before becoming max heap " + Arrays.toString(heapArray1));
         Heap.buildMaxHeap(heapArray1);

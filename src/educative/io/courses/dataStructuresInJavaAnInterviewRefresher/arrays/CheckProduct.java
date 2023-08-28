@@ -1,12 +1,12 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 
 /*
-* Challenge 4: Array of Products of All Elements Except Itself
-* 
-* Given an array, return an array where each index stores the product of all numbers except the number on the index itself.
-* 
-* author francesco giordano
-*/
+ * Challenge 4: Array of Products of All Elements Except Itself
+ *
+ * Given an array, return an array where each index stores the product of all numbers except the number on the index itself.
+ *
+ * author francesco giordano
+ */
 public class CheckProduct {
 
     // brute force O(n^)
@@ -61,7 +61,7 @@ public class CheckProduct {
 
     public static void main(String[] args) {
 
-        int[] arr = { 1, 2, 3, 4 };
+        int[] arr = {1, 2, 3, 4};
         arr = CheckProduct.findProduct2(arr);
         for (int num : arr)
             System.out.print(num + " ");

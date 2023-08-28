@@ -1,12 +1,12 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 
 /*
-* Challenge 2 : Merge Two Sorted Arrays
-*
-* Given two sorted arrays, merge them into one array which should also be sorted.
-*
-* author: francesco giordano
-*/
+ * Challenge 2 : Merge Two Sorted Arrays
+ *
+ * Given two sorted arrays, merge them into one array which should also be sorted.
+ *
+ * author: francesco giordano
+ */
 public class CheckMergeArray {
 
     public static int[] mergeArrays(int[] arr1, int[] arr2) {
@@ -25,8 +25,7 @@ public class CheckMergeArray {
                 result[resultIndex] = arr1[indexArr1];
                 indexArr1++;
                 resultIndex++;
-            }
-            else {
+            } else {
                 result[resultIndex] = arr2[indexArr2];
                 indexArr2++;
                 resultIndex++;
@@ -54,7 +53,7 @@ public class CheckMergeArray {
         int[] result;
 
         result = CheckMergeArray.mergeArrays(arr1, arr2);
-        for (int num: result) 
+        for (int num : result)
             System.out.println(num);
     }
 

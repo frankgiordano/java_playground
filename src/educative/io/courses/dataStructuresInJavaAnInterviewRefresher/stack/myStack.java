@@ -44,7 +44,7 @@ public class myStack {
     public int pop() {
         if (!isEmpty()) {
             return stackArray[top--]; // returns the most recent element added, and updates the value of the top
-                                      // element
+            // element
         } else { // no element present in the stack to return
             System.err.println("Your Stack is empty");
             return -1;

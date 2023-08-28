@@ -3,15 +3,15 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
 public class CheckParentheses {
 
     public static boolean isCloseParatheses(char c) {
-        return c == ')' ? true : false; 
+        return c == ')' ? true : false;
     }
 
     public static boolean isCloseClurly(char c) {
-        return c == '}' ? true : false; 
+        return c == '}' ? true : false;
     }
 
     public static boolean isCloseBlock(char c) {
-        return c == ']' ? true : false; 
+        return c == ']' ? true : false;
     }
 
     public static boolean isBalanced(String exp) {
@@ -29,18 +29,18 @@ public class CheckParentheses {
                 continue;
 
             if (isCloseParatheses(c)) {
-                if (stack.pop() != '(') 
-                  return false;
+                if (stack.pop() != '(')
+                    return false;
                 else continue;
             }
             if (isCloseClurly(c)) {
-                if (stack.pop() != '{') 
-                  return false;
+                if (stack.pop() != '{')
+                    return false;
                 else continue;
             }
             if (isCloseBlock(c)) {
-                if (stack.pop() != '[') 
-                  return false;
+                if (stack.pop() != '[')
+                    return false;
                 else continue;
             }
 

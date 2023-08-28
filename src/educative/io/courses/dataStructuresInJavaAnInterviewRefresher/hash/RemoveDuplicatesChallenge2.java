@@ -15,12 +15,12 @@ This example uses the SinglyLinkedList from educative.io
 author: francesco giordano
 */
 public class RemoveDuplicatesChallenge2 {
-    
+
     public static String removeDuplicatesWithHashing(SinglyLinkedList<Integer> list) {
         // time O(n) 
         Set<Integer> visitedNodes = new HashSet<Integer>();
-        SinglyLinkedList<Integer> .Node finger = list.getHeadNode();
-        SinglyLinkedList<Integer> .Node prev = null;
+        SinglyLinkedList<Integer>.Node finger = list.getHeadNode();
+        SinglyLinkedList<Integer>.Node prev = null;
 
         while (finger != null) {
             Object checkValue = finger.data;
@@ -39,23 +39,23 @@ public class RemoveDuplicatesChallenge2 {
     }
 
     // Helper Function to convert List elements in a single string
-	private static <V> String elements(SinglyLinkedList<V> list) {
+    private static <V> String elements(SinglyLinkedList<V> list) {
 
-		String elementsList = "";
+        String elementsList = "";
 
-		SinglyLinkedList<V>.Node start = list.getHeadNode();
+        SinglyLinkedList<V>.Node start = list.getHeadNode();
 
-		while (start != null) {
-			elementsList += start.data;
-			elementsList += "->";
-			start = start.nextNode;
-		}
-    
-		elementsList += "null";
-		return elementsList;
-	}
+        while (start != null) {
+            elementsList += start.data;
+            elementsList += "->";
+            start = start.nextNode;
+        }
 
-    public static void main (String[] args) {
+        elementsList += "null";
+        return elementsList;
+    }
+
+    public static void main(String[] args) {
 
         SinglyLinkedList<Integer> list = new SinglyLinkedList<Integer>();
         list.insertAtEnd(1);

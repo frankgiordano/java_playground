@@ -22,7 +22,7 @@ public class PhoneNumberStringCombs {
      * Runtime: 1 ms, faster than 78.72% of Java online submissions for Letter
      * Combinations of a Phone Number. Memory Usage: 37.8 MB, less than 73.82% of
      * Java online submissions for Letter Combinations of a Phone Number.
-     * 
+     * <p>
      * This version uses a second LinkedList and as such uses more space. It also
      * uses a String array as HashMap value.
      */
@@ -37,21 +37,21 @@ public class PhoneNumberStringCombs {
 
         HashMap<String, String[]> dialPad = new HashMap<>();
 
-        String[] letters2 = { "a", "b", "c" };
+        String[] letters2 = {"a", "b", "c"};
         dialPad.put("2", letters2);
-        String[] letters3 = { "d", "e", "f" };
+        String[] letters3 = {"d", "e", "f"};
         dialPad.put("3", letters3);
-        String[] letters4 = { "g", "h", "i" };
+        String[] letters4 = {"g", "h", "i"};
         dialPad.put("4", letters4);
-        String[] letters5 = { "j", "k", "l" };
+        String[] letters5 = {"j", "k", "l"};
         dialPad.put("5", letters5);
-        String[] letters6 = { "m", "n", "o" };
+        String[] letters6 = {"m", "n", "o"};
         dialPad.put("6", letters6);
-        String[] letters7 = { "p", "q", "r", "s" };
+        String[] letters7 = {"p", "q", "r", "s"};
         dialPad.put("7", letters7);
-        String[] letters8 = { "t", "u", "v" };
+        String[] letters8 = {"t", "u", "v"};
         dialPad.put("8", letters8);
-        String[] letters9 = { "w", "x", "y", "z" };
+        String[] letters9 = {"w", "x", "y", "z"};
         dialPad.put("9", letters9);
 
         lst.add("");
@@ -126,11 +126,11 @@ public class PhoneNumberStringCombs {
      * Runtime: 1 ms, faster than 78.72% of Java online submissions for Letter
      * Combinations of a Phone Number. Memory Usage: 37.7 MB, less than 79.77% of
      * Java online submissions for Letter Combinations of a Phone Number.
-     * 
+     * <p>
      * This version uses a more striaght forward way to hold the phone key pad info
      * instead of using a HashMap. I removed the usage of Queue data structure and
      * avoided the casting done in letterCombinations2.
-     * 
+     * <p>
      * This version looks better than version 1 and 2.
      */
     public static List<String> letterCombinations3(String digits) {
@@ -173,11 +173,11 @@ public class PhoneNumberStringCombs {
      * Runtime: 4 ms, faster than 44.70% of Java online submissions for Letter
      * Combinations of a Phone Number. Memory Usage: 39.6 MB, less than 5.22% of
      * Java online submissions for Letter Combinations of a Phone Number.
-     * 
+     * <p>
      * Leetcode reports this method to be the worst of all others. This is due to
      * the fact of: lst.add(item + values.charAt(j)); instead of lst.add(item +
      * Character.toString(values.charAt(j)));
-     * 
+     * <p>
      * high memory and cpu usage due to string + of a char
      */
     public static List<String> letterCombinations4(String digits) {
@@ -218,7 +218,7 @@ public class PhoneNumberStringCombs {
      * Runtime: 0 ms, faster than 100.00% of Java online submissions for Letter
      * Combinations of a Phone Number. Memory Usage: 37.7 MB, less than 79.77% of
      * Java online submissions for Letter Combinations of a Phone Number.
-     * 
+     * <p>
      * This version using StringBuilder and provides the best leetcode results!
      */
     public static List<String> letterCombinations5(String digits) {

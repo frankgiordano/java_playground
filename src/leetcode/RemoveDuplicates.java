@@ -65,13 +65,13 @@ public class RemoveDuplicates {
     }
 
     public static void main(String[] args) {
-        int[] input = { 1, 1, 2, 2, 3, 4, 5, 5 };
+        int[] input = {1, 1, 2, 2, 3, 4, 5, 5};
         int len;
         len = RemoveDuplicates.removeDuplicates(input);
         for (int i = 0; i < len; i++)
             System.out.println(input[i]);
         System.out.println();
-        int[] input2 = { 1, 1, 2, 2, 3, 4, 5, 5 };
+        int[] input2 = {1, 1, 2, 2, 3, 4, 5, 5};
         len = RemoveDuplicates.removeDuplicates2(input2);
         for (int i = 0; i < len; i++)
             System.out.println(input2[i]);

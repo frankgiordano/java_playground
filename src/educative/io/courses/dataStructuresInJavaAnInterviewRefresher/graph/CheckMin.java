@@ -5,15 +5,15 @@ import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.queue.myQue
 
 public class CheckMin {
 
-    public static int findMin(myGraph g, int source,int destination) {
+    public static int findMin(myGraph g, int source, int destination) {
 
         int result = 0;
         int num_of_vertices = g.vertices;
         myQueue queue = new myQueue(num_of_vertices);
         boolean[] visited = new boolean[num_of_vertices];
-        for (int i = 0; i < num_of_vertices; i++) 
+        for (int i = 0; i < num_of_vertices; i++)
             visited[i] = false;
-        
+
         queue.enqueue(source);
 
         while (!queue.isEmpty()) {
@@ -23,23 +23,23 @@ public class CheckMin {
                 visited[value] = true;
                 result++;
                 if (value == destination)
-                    return result/2; // undirected graph need to divide by 2
+                    return result / 2; // undirected graph need to divide by 2
             }
 
             if (g.adjacencyList[value] == null)
-              continue;
+                continue;
 
             Node finger = g.adjacencyList[value].headNode.nextElement;
             while (finger != null) {
                 int data = finger.data;
-                if (visited[data] != true) 
+                if (visited[data] != true)
                     queue.enqueue(finger.data);
                 finger = finger.nextElement;
-            } 
+            }
         }
 
         return result;
-    } 
+    }
 
     public static void main(String[] args) {
 

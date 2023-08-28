@@ -50,9 +50,9 @@ public class ReverseSentence {
 
     /*
      * Given an input string, reverse the string word by word.
-     * 
+     *
      * Input will contain no leading or trailing spaces or multipe spaces
-     * 
+     *
      * runtime O(n) space O(1)
      */
     public static String reverseWords2(char[] arr) {
@@ -84,12 +84,12 @@ public class ReverseSentence {
 
     /*
      * Given an input string, reverse the string word by word.
-     * 
+     *
      * A word is defined as a sequence of non-space characters. Input string may
      * contain leading or trailing spaces. However, your reversed string should not
      * contain leading or trailing spaces. You need to reduce multiple spaces
      * between two words to a single space in the reversed string.
-     * 
+     *
      * leetcode = 3ms time, 38.2 MB MB memory
      */
     public static String reverseWords3(String s) {

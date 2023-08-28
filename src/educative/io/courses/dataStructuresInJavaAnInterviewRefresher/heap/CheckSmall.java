@@ -62,8 +62,8 @@ public class CheckSmall {
 
     public static void main(String[] args) {
 
-        int[] heapArray = { 56, 12, 9, 8, 7, 4, 3, 2, 1 };
-        int[] heapArray2 = { 9, 4, 7, 1, -2, 6, 5 };
+        int[] heapArray = {56, 12, 9, 8, 7, 4, 3, 2, 1};
+        int[] heapArray2 = {9, 4, 7, 1, -2, 6, 5};
 
         System.out.println("Array = " + Arrays.toString(heapArray));
         int[] result = CheckSmall.findKSmallest(heapArray, 3);

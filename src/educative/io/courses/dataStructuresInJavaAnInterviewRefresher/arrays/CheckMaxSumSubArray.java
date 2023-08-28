@@ -60,17 +60,17 @@ public class CheckMaxSumSubArray {
         return globalMax;
     }
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         System.out.println(CheckMaxSumSubArray.getMaxSumSubArray(new int[]{1, 7, -2, -5, 10, -1}));
         System.out.println(CheckMaxSumSubArray.getMaxSumSubArray(new int[]{-7, 6, -2}));
-        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray(new int[]{5,4,-1,7,8}));
-        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
-        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray(new int[]{-2,-1}));
+        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray(new int[]{5, 4, -1, 7, 8}));
+        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray(new int[]{-2, -1}));
         System.out.println(CheckMaxSumSubArray.getMaxSumSubArray2(new int[]{1, 7, -2, -5, 10, -1}));
         System.out.println(CheckMaxSumSubArray.getMaxSumSubArray2(new int[]{-7, 6, -2}));
-        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray2(new int[]{5,4,-1,7,8}));
-        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray2(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
-        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray2(new int[]{-2,-1}));
+        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray2(new int[]{5, 4, -1, 7, 8}));
+        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray2(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        System.out.println(CheckMaxSumSubArray.getMaxSumSubArray2(new int[]{-2, -1}));
     }
 
 }

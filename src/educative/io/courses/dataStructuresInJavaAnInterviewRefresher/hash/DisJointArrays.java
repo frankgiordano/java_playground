@@ -19,11 +19,11 @@ class DisJointArrays {
         // time O(n+m) time, space O(n) 
         Set<Integer> set = new HashSet<Integer>();
 
-        for (int i: arr1) {
+        for (int i : arr1) {
             set.add(i);
         }
 
-        for (int j: arr2) {
+        for (int j : arr2) {
             if (set.contains(j))
                 return false;
         }
@@ -33,10 +33,10 @@ class DisJointArrays {
 
     public static void main(String[] args) {
 
-        int[] arr1 = {9,4,3,1,-2,6,5};
-        int[] arr2 = {7,10,8};
+        int[] arr1 = {9, 4, 3, 1, -2, 6, 5};
+        int[] arr2 = {7, 10, 8};
 
         System.out.println(DisJointArrays.isDisjoint(arr1, arr2));
-    }    
+    }
 
 }

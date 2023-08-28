@@ -2,7 +2,7 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.queue;
 
 /**
  * Generate Binary Numbers from 1 to n using a Queue
- * 
+ * <p>
  * auther: francesco giordano
  */
 public class CheckBinary {

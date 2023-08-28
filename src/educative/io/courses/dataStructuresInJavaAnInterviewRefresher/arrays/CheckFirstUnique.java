@@ -3,14 +3,14 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/* 
-* Challenge 6: First Non-Repeating Integer in an Array
-*
-* Given an array, find the first integer which is unique in the array. 
-* Unique means the number does not repeat and appears only once in the whole array. 
-*
-* author francesco giordano
-*/
+/*
+ * Challenge 6: First Non-Repeating Integer in an Array
+ *
+ * Given an array, find the first integer which is unique in the array.
+ * Unique means the number does not repeat and appears only once in the whole array.
+ *
+ * author francesco giordano
+ */
 public class CheckFirstUnique {
 
     // brute force O(n^) time
@@ -63,7 +63,7 @@ public class CheckFirstUnique {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 9, 2, 3, 2, 6, 6 };
+        int[] arr = {9, 2, 3, 2, 6, 6};
         System.out.println(CheckFirstUnique.findFirstUnique(arr));
         System.out.println(CheckFirstUnique.findFirstUnique2(arr));
     }

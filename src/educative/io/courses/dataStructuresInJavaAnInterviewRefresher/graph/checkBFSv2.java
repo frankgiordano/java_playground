@@ -6,9 +6,9 @@ import java.util.Queue;
 
 /**
  * Implement a BFS traversal of a graph structure
- * 
+ * <p>
  * Using GraphAdjacencyList class implementation
- * 
+ * <p>
  * author Francesco Giordano
  */
 public class checkBFSv2 {
@@ -21,14 +21,14 @@ public class checkBFSv2 {
         queue.add(source);
         visited[source] = true;
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             int curr_val = queue.remove();
             result += String.valueOf(curr_val);
 
             ArrayList<Integer> edges = graph.getNeighbors(curr_val);
 
-            for (Integer edge: edges) {
+            for (Integer edge : edges) {
                 if (!visited[edge]) {
                     queue.add(edge);
                     visited[edge] = true;

@@ -1,11 +1,11 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.hash;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.LinkedList;
 import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.Node;
 import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.SingleLinkedListOperations;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /*
 Challenge 8 : Remove Duplicates from a Linked List
@@ -17,7 +17,7 @@ matches the expected output.
 author: francesco giordano
 */
 public class RemoveDuplicatesChallenge {
-    
+
     public static String removeDuplicatesWithHashing(LinkedList list) {
         // time O(n) 
         Set<Integer> visitedNodes = new HashSet<Integer>();
@@ -41,23 +41,23 @@ public class RemoveDuplicatesChallenge {
     }
 
     // Helper Function to convert List elements in a single string
-	private static String elements(LinkedList list) {
+    private static String elements(LinkedList list) {
 
-		String elementsList = "";
+        String elementsList = "";
 
-		Node start = list.headNode.nextElement;
+        Node start = list.headNode.nextElement;
 
-		while (start != null) {
-			elementsList += start.data;
-			elementsList += "->";
-			start = start.nextElement;
-		}
-    
-		elementsList += "null";
-		return elementsList;
-	}
+        while (start != null) {
+            elementsList += start.data;
+            elementsList += "->";
+            start = start.nextElement;
+        }
 
-    public static void main (String[] args) {
+        elementsList += "null";
+        return elementsList;
+    }
+
+    public static void main(String[] args) {
 
         LinkedList list = new LinkedList();
 

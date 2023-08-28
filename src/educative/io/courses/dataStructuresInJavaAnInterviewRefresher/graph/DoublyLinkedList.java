@@ -53,7 +53,7 @@ public class DoublyLinkedList<T> {
     }
 
     public void insertAtEnd(T data) {
-        if(isEmpty()) {
+        if (isEmpty()) {
             insertAtHead(data);
             return;
         }
@@ -99,8 +99,8 @@ public class DoublyLinkedList<T> {
         System.out.println(temp.data.toString() + " -> null");
     }
 
-    public void deleteAtHead(){
-        if(isEmpty())
+    public void deleteAtHead() {
+        if (isEmpty())
             return;
 
         headNode = headNode.nextNode;
@@ -108,8 +108,8 @@ public class DoublyLinkedList<T> {
         size--;
     }
 
-    public void deleteAtTail(){
-        if(isEmpty())
+    public void deleteAtTail() {
+        if (isEmpty())
             return;
 
         tailNode = tailNode.prevNode;

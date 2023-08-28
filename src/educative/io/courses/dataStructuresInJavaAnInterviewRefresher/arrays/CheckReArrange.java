@@ -11,11 +11,11 @@ author: francesco giordano
 */
 public class CheckReArrange {
 
-    public static void reArrange1(int[] arr) { 
+    public static void reArrange1(int[] arr) {
         // time n+n+n = 3n = O(n)
         // space O(1)
 
-        if (arr == null) 
+        if (arr == null)
             return;
 
         int size = arr.length;
@@ -24,12 +24,12 @@ public class CheckReArrange {
 
         int index = 0;
         for (int i = 0; i < size; i++) {
-            if (arr[i] < 0) 
+            if (arr[i] < 0)
                 result[index++] = arr[i];
         }
 
         for (int i = 0; i < size; i++) {
-            if (arr[i] > 0) 
+            if (arr[i] > 0)
                 result[index++] = arr[i];
         }
 
@@ -39,11 +39,11 @@ public class CheckReArrange {
 
     }
 
-    public static void reArrange2(int[] arr) { 
+    public static void reArrange2(int[] arr) {
         // time O(n)
         // space O(1)
 
-        if (arr == null) 
+        if (arr == null)
             return;
 
         int size = arr.length;
@@ -56,13 +56,13 @@ public class CheckReArrange {
                     arr[j] = arr[i];
                     arr[i] = tmp;
                 }
-        }   
+            }
         }
 
     }
 
     public static void main(String args[]) {
-        int[] arr = { -1, 2, 3, -5, -3, -10, 7 };
+        int[] arr = {-1, 2, 3, -5, -3, -10, 7};
 
         CheckReArrange.reArrange1(arr);
 

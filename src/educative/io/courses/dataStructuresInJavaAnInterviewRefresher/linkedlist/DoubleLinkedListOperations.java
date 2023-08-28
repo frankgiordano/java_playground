@@ -16,11 +16,11 @@ class DoubleLinkedList {
     }
 
     // Helper Function that checks if List is empty or not 
-	public boolean isEmpty() {
+    public boolean isEmpty() {
 
-		if (headNode.nextElement == null) return true;
-		return false;
-	}
+        if (headNode.nextElement == null) return true;
+        return false;
+    }
 
     // Helper Function to printList  
     public boolean printList() {
@@ -46,26 +46,26 @@ class DoubleLinkedList {
 
 class DoubleLinkedListOperations {
 
-    public static int length(DoubleLinkedList list){
+    public static int length(DoubleLinkedList list) {
         NodeD finger = list.headNode;
         int count = 0;
-        
+
         if (finger.nextElement == null)
-          return count;
-    
+            return count;
+
         while (finger.nextElement != null) {
             finger = finger.nextElement;
             count++;
         }
-    
-        return count;  
+
+        return count;
     }
 
     public static String reverse(DoubleLinkedList list) {
 
         NodeD curr = list.headNode.nextElement;
         NodeD next = curr.nextElement;
-        NodeD prev = null; 
+        NodeD prev = null;
 
         while (next != null) {
             curr.nextElement = prev;
@@ -84,10 +84,10 @@ class DoubleLinkedListOperations {
     public static boolean searchNode(DoubleLinkedList list, int value) {
         NodeD finger = list.headNode;
 
-        while(finger != null) {
+        while (finger != null) {
 
             if (finger.data == value) {
-                return true;                
+                return true;
             }
             finger = finger.nextElement;
         }
@@ -101,28 +101,28 @@ class DoubleLinkedListOperations {
         newNode.data = value;
         newNode.nextElement = list.headNode.nextElement;
         newNode.previousElement = list.headNode;
-        list.headNode.nextElement = newNode; 
+        list.headNode.nextElement = newNode;
         return elements(list);
     }
 
     // Helper Function to convert List elements in a single string
-	public static String elements(DoubleLinkedList list) {
+    public static String elements(DoubleLinkedList list) {
 
-		String elementsList = "";
+        String elementsList = "";
 
-		NodeD start = list.headNode.nextElement;
+        NodeD start = list.headNode.nextElement;
 
-		while (start != null) {
-			elementsList += start.data;
-			elementsList += "->";
-			start = start.nextElement;
-		}
+        while (start != null) {
+            elementsList += start.data;
+            elementsList += "->";
+            start = start.nextElement;
+        }
 
-		elementsList += "null";
+        elementsList += "null";
 
-		return elementsList;
+        return elementsList;
     }
-    
+
     public static void main(String[] args) {
 
         DoubleLinkedList list = new DoubleLinkedList();

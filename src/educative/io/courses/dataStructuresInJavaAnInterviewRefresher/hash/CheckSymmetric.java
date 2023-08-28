@@ -25,7 +25,7 @@ class CheckSymmetric {
             int second = arr[i][1];
 
             if (map.containsKey(second) != false && map.get(second) == first) {
-                result += "{"+second+","+first+"}";
+                result += "{" + second + "," + first + "}";
             } else {
                 map.put(first, second);
             }
@@ -35,7 +35,7 @@ class CheckSymmetric {
     }
 
     public static void main(String[] args) {
-        int[][] arr = { {1, 2}, {3, 4}, {5, 9}, {4, 3}, {9, 5} };
+        int[][] arr = {{1, 2}, {3, 4}, {5, 9}, {4, 3}, {9, 5}};
         System.out.println(CheckSymmetric.findSymmetric(arr));
     }
 

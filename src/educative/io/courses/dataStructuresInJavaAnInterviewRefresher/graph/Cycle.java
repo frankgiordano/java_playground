@@ -16,7 +16,7 @@ public class Cycle {
         stack.push(source);
         visited[source] = true;
 
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
 
             int curr_val = stack.pop();
 
@@ -30,8 +30,7 @@ public class Cycle {
                 if (!visited[edge]) {
                     stack.push(edge);
                     visited[edge] = true;
-                }
-                else {
+                } else {
                     return true;
                 }
 

@@ -52,7 +52,7 @@ public class CheckConvert {
     }
 
     public static void main(String[] args) {
-        int[] heapArray = { 56, 12, 9, 8, 7, 4, 3, 2, 1 };
+        int[] heapArray = {56, 12, 9, 8, 7, 4, 3, 2, 1};
 
         System.out.println("Max heap = " + Arrays.toString(heapArray));
         System.out.println("Convert min heap = " + CheckConvert.convertMax(heapArray));

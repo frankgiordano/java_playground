@@ -19,7 +19,7 @@ public class SinglyLinkedList<T> {
         size = 0;
     }
 
-     public Node getHeadNode() {
+    public Node getHeadNode() {
         return headNode;
     }
 
@@ -34,7 +34,7 @@ public class SinglyLinkedList<T> {
     public void setSize(int size) {
         this.size = size;
     }
-    
+
     public boolean isEmpty() {
 
         if (headNode == null) return true;
@@ -147,7 +147,7 @@ public class SinglyLinkedList<T> {
         Node currentNode = this.headNode;
         Node prevNode = null; //previous node starts from null
 
-        if(currentNode.data.equals(data)) {
+        if (currentNode.data.equals(data)) {
             //data is at head so delete from head
             deleteAtHead();
             return;
@@ -155,28 +155,29 @@ public class SinglyLinkedList<T> {
         //traverse the list searching for the data to delete
         while (currentNode != null) {
             //node to delete is found
-            if (data.equals(currentNode.data)){
+            if (data.equals(currentNode.data)) {
                 prevNode.nextNode = currentNode.nextNode;
             }
             prevNode = currentNode;
             currentNode = currentNode.nextNode;
         }
     }
+
     //Reverses the linked list
     public void reverse() {
         Node prev = null; //To keep track of the previous element, will be used in swapping links
-		Node current = this.headNode; //firstElement
-		Node next = null;
+        Node current = this.headNode; //firstElement
+        Node next = null;
 
-		//While Traversing the list, swap links
-		while (current != null) {
-			next = current.nextNode;
-			current.nextNode = prev;
-			prev = current;
-			current = next;
-		}
-		//Linking Head Node with the new First Element
-		this.headNode = prev;
+        //While Traversing the list, swap links
+        while (current != null) {
+            next = current.nextNode;
+            current.nextNode = prev;
+            prev = current;
+            current = next;
+        }
+        //Linking Head Node with the new First Element
+        this.headNode = prev;
     }
 
     public void removeDuplicates() {

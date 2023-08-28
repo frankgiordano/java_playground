@@ -25,13 +25,13 @@ class CheckPair {
             for (int j = i + 1; j < arr.length; j++) {
                 int second = arr[j];
                 int sum = first + second;
-                String value = "{"+first+","+second+"}";
+                String value = "{" + first + "," + second + "}";
                 if (!map.containsKey(sum)) {
                     map.put(sum, value);
                 } else {
                     // current one and the one in the map
                     result += map.get(sum);
-                    result += ","+value;
+                    result += "," + value;
                     return result;
                 }
             }

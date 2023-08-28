@@ -23,49 +23,49 @@ public class CheckSubZero {
         //arr[i] == 0 or sum == 0 or HashMap already contains the sum
         //If you completely traverse the array and havent found any of the above three
         //conditions then simply return false.
-        HashMap < Integer,Integer > hMap = new HashMap < >();
-    
+        HashMap<Integer, Integer> hMap = new HashMap<>();
+
         int sum = 0;
-    
+
         // Traverse through the given array
         for (int i = 0; i < arr.length; i++) {
-          sum += arr[i];
-    
-          if (arr[i] == 0 || sum == 0 || hMap.get(sum) != null) 
-            return true;
-    
-          hMap.put(sum, i);
-        }
-    
-        return false;
-      }
+            sum += arr[i];
 
-      public static boolean findSubZero2(int[] arr) {
+            if (arr[i] == 0 || sum == 0 || hMap.get(sum) != null)
+                return true;
+
+            hMap.put(sum, i);
+        }
+
+        return false;
+    }
+
+    public static boolean findSubZero2(int[] arr) {
         // time O(n), space O(1)
         Map<Integer, Integer> sumMap = new HashMap<Integer, Integer>();
-    
+
         int index = 0;
         int sum = 0;
         while (index < arr.length) {
-          sum += arr[index];
-    
-          if (arr[index] == 0 || sum == 0 || sumMap.containsKey(sum))
-            return true;
-    
-          sumMap.put(sum, index);
-    
-          index++;
-        }
-    
-        return false;
-      }
+            sum += arr[index];
 
-      public static boolean findSubZero3(int[] arr) {
+            if (arr[index] == 0 || sum == 0 || sumMap.containsKey(sum))
+                return true;
+
+            sumMap.put(sum, index);
+
+            index++;
+        }
+
+        return false;
+    }
+
+    public static boolean findSubZero3(int[] arr) {
         // time O(n2), space O(1)
         int sum = 0;
 
         for (int i = 0; i < arr.length; i++) {
-  
+
             for (int j = i; j < arr.length; j++) {
 
                 sum += arr[j];
@@ -76,19 +76,19 @@ public class CheckSubZero {
             }
             sum = 0;
         }
-    
+
         return false;
-      }
-    
-      public static void main(String args[]) {
-    
+    }
+
+    public static void main(String args[]) {
+
         int[] arr = {6, 4, -7, 3, 12, 9};
         System.out.println(findSubZero(arr));
         System.out.println(findSubZero2(arr));
         System.out.println(findSubZero3(arr));
-        int[] arr2 = {6, 4, -7 };
+        int[] arr2 = {6, 4, -7};
         System.out.println(findSubZero3(arr2));
 
-      }
+    }
 
 }

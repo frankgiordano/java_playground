@@ -46,7 +46,7 @@ public class CombinationSum {
     }
 
     private static void findCombinations(List<List<Integer>> results, int[] input, List<Integer> combination,
-            int target, int startIndex) {
+                                         int target, int startIndex) {
         if (target == 0) {
             results.add(new ArrayList<>(combination));
             return;
@@ -65,7 +65,7 @@ public class CombinationSum {
 
     public static void main(String[] args) {
 
-        int[] input = { 2, 3, 6, 7 };
+        int[] input = {2, 3, 6, 7};
         List<List<Integer>> results = combinationSum(input, 7);
         results.forEach(i -> {
             System.out.println(i);

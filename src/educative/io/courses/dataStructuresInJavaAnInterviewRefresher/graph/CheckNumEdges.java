@@ -12,14 +12,14 @@ public class CheckNumEdges {
             Node finger = null;
             if (g.adjacencyList[i] != null && g.adjacencyList[i].headNode != null)
                 finger = g.adjacencyList[i].headNode.nextElement;
-            while (finger != null) { 
+            while (finger != null) {
                 count++;
                 finger = finger.nextElement;
             }
         }
 
-        return count; 
-    } 
+        return count;
+    }
 
     public static void main(String[] args) {
         myGraph graph = new myGraph(3);

@@ -1,14 +1,6 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 // Given a non-empty array of integers, return the k most frequent elements.
 
@@ -92,7 +84,7 @@ public class TopKFrequentElements {
 
     public static void main(String[] args) {
         TopKFrequentElements instance = new TopKFrequentElements();
-        int[] input = { 1, 1, 1, 2, 2, 3 };
+        int[] input = {1, 1, 1, 2, 2, 3};
         List<Integer> result = instance.topKFrequent1(input, 2);
         for (Integer r : result)
             System.out.print(r + " ");

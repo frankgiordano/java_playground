@@ -5,9 +5,9 @@ import java.util.Stack;
 
 /**
  * Implement a DFS traversal of a graph structure
- * 
+ * <p>
  * Using GraphAdjacencyList class implementation
- * 
+ * <p>
  * author Francesco Giordano
  */
 public class CheckDFSv2 {
@@ -27,7 +27,7 @@ public class CheckDFSv2 {
 
             ArrayList<Integer> edges = graph.getNeighbors(curr_val);
 
-            for (Integer edge: edges) {
+            for (Integer edge : edges) {
                 if (!visited[edge]) {
                     stack.push(edge);
                     visited[edge] = true;
@@ -37,7 +37,7 @@ public class CheckDFSv2 {
         }
 
         return result;
-    } 
+    }
 
     public static void main(String args[]) {
         GraphAdjacencyList graph = new GraphAdjacencyList(6);

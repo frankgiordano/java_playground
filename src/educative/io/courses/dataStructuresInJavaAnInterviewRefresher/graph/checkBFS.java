@@ -5,7 +5,7 @@ import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.queue.myQue
 
 /**
  * Implement a BFS traversal of a graph structure
- * 
+ * <p>
  * author Francesco Giordano
  */
 class checkBFS {
@@ -16,9 +16,9 @@ class checkBFS {
         int num_of_vertices = g.vertices;
         myQueue queue = new myQueue(num_of_vertices);
         boolean[] visited = new boolean[num_of_vertices];
-        for (int i = 0; i < num_of_vertices; i++) 
+        for (int i = 0; i < num_of_vertices; i++)
             visited[i] = false;
-        
+
         queue.enqueue(source);
 
         while (!queue.isEmpty()) {
@@ -30,15 +30,15 @@ class checkBFS {
             }
             // System.out.println(result);
             if (g.adjacencyList[value] == null)
-              continue;
+                continue;
 
             Node finger = g.adjacencyList[value].headNode.nextElement;
             while (finger != null) {
                 int data = finger.data;
-                if (visited[data] != true) 
+                if (visited[data] != true)
                     queue.enqueue(finger.data);
                 finger = finger.nextElement;
-            } 
+            }
         }
 
         return result;

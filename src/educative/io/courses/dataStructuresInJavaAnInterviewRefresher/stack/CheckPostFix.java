@@ -1,9 +1,9 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
- 
+
 /**
  * Evaluate Postfix Expression using Stack
- * 
- * author: francesco giordano 
+ * <p>
+ * author: francesco giordano
  */
 public class CheckPostFix {
 
@@ -18,7 +18,7 @@ public class CheckPostFix {
 
         int size = exp.length();
         myStack stack = new myStack(size);
-    
+
         char c;
         for (int i = 0; i < size; i++) {
             c = exp.charAt(i);
@@ -46,7 +46,7 @@ public class CheckPostFix {
         return stack.pop();
     }
 
-    public static void main (String args[]) {
+    public static void main(String args[]) {
         int result = CheckPostFix.evaluatePostFix("921*-8-4+");
         System.out.println(result);
     }

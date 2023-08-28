@@ -46,8 +46,8 @@ public class CountDuplicateCharacters {
 
         // java 8 style with stream..
         result = str.chars().mapToObj(c -> (char) c)
-                    .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
-        
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+
         return result;
     }
 
@@ -57,21 +57,21 @@ public class CountDuplicateCharacters {
         String input = "loveleetcode";
 
         Map<Character, Integer> result = CountDuplicateCharacters.solution1(input);
-        for (Map.Entry<Character, Integer> entry: result.entrySet()) {
+        for (Map.Entry<Character, Integer> entry : result.entrySet()) {
             System.out.println(entry.getKey() + " = " + entry.getValue());
         }
         System.out.println();
         result = CountDuplicateCharacters.solution2(input);
-        for (Map.Entry<Character, Integer> entry: result.entrySet()) {
+        for (Map.Entry<Character, Integer> entry : result.entrySet()) {
             System.out.println(entry.getKey() + " = " + entry.getValue());
         }
         System.out.println();
         Map<Character, Long> results = CountDuplicateCharacters.solution3(input);
-        for (Map.Entry<Character, Long> entry: results.entrySet()) {
+        for (Map.Entry<Character, Long> entry : results.entrySet()) {
             System.out.println(entry.getKey() + " = " + entry.getValue());
         }
 
     }
 
-    
+
 }

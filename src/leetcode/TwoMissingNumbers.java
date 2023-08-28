@@ -44,11 +44,11 @@ public class TwoMissingNumbers {
                 numsXorRight ^= i;
         }
 
-        return new int[] { totalXorLeft ^ numsXorLeft, totalXorRight ^ numsXorRight };
+        return new int[]{totalXorLeft ^ numsXorLeft, totalXorRight ^ numsXorRight};
     }
 
     public static void main(String[] args) {
-        int[] input = { 1, 2, 4, 6 };
+        int[] input = {1, 2, 4, 6};
 
         int[] result = TwoMissingNumbers.getTwoMissingNumber(input);
         for (int i : result)

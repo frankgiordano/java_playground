@@ -1,4 +1,5 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.trees;
+
 public class BinaryTree {
 
     private Node root;

@@ -16,14 +16,14 @@ class CheckSubset {
     public static boolean isSubset(int[] arr1, int[] arr2) {
         // time O(n + m). space O(n)
         HashSet<Integer> set = new HashSet<Integer>();
-        
-        for (int value: arr1) {   // O(n)
+
+        for (int value : arr1) {   // O(n)
             set.add(Integer.valueOf(value));
         }
 
-        for (int value: arr2) {   // O(m)
-            if (!set.contains(value)) 
-              return false;
+        for (int value : arr2) {   // O(m)
+            if (!set.contains(value))
+                return false;
         }
 
         return true;

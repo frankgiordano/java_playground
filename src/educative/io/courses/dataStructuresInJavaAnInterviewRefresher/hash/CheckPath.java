@@ -35,12 +35,12 @@ public class CheckPath {
 
         Map<String, String> reverseMap = new HashMap<String, String>();
 
-        for (Map.Entry<String, String> entry: map.entrySet()) {
+        for (Map.Entry<String, String> entry : map.entrySet()) {
             reverseMap.put(entry.getValue(), entry.getKey());
         }
 
         // find starting point
-        for (Map.Entry<String, String> entry: map.entrySet()) {
+        for (Map.Entry<String, String> entry : map.entrySet()) {
             if (!reverseMap.containsKey(entry.getKey())) {
                 point = entry.getKey();
                 break;
@@ -55,7 +55,7 @@ public class CheckPath {
             dest = point;
             source = map.get(point);
 
-            result += dest+"->"+source+", ";
+            result += dest + "->" + source + ", ";
 
             point = source;
         }

@@ -1,17 +1,19 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.graph;
 
-import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.*;
+import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.LinkedList;
+import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.Node;
+import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.SingleLinkedListOperations;
 
 /**
  * Directed graph data structure
- *
- * This class uses custom built linkedlist to represent the graph.. 
- * 
+ * <p>
+ * This class uses custom built linkedlist to represent the graph..
+ * <p>
  * author Francesco Giordano
  */
 public class myGraph {
 
-    int vertices; 
+    int vertices;
     LinkedList[] adjacencyList;
 
     public myGraph(int vertices) {
@@ -35,8 +37,8 @@ public class myGraph {
                 System.out.print(i + " -> ");
                 Node finger = adjacencyList[i].headNode.nextElement;
                 while (finger != null) {
-                    System.out.print(finger.data + " -> "); 
-                    finger = finger.nextElement;                       
+                    System.out.print(finger.data + " -> ");
+                    finger = finger.nextElement;
                 }
                 System.out.println("null");
             }
@@ -52,6 +54,6 @@ public class myGraph {
         g.addEdge(1, 4);
 
         g.printGraph();
-    } 
+    }
 
 }

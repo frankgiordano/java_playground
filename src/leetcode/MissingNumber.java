@@ -103,7 +103,7 @@ public class MissingNumber {
 
     public static void main(String[] args) {
 
-        int[] input = { 0, 1, 3, 4 };
+        int[] input = {0, 1, 3, 4};
 
         System.out.println(MissingNumber.getMissingNumber1(input));
         System.out.println(MissingNumber.getMissingNumber2(input));

@@ -2,7 +2,7 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
 
 /**
  * Implement Two Stacks using one Array
- * 
+ * <p>
  * author francesco giordano
  */
 public class TwoStacks {

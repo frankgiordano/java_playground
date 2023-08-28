@@ -3,7 +3,7 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack;
 public class CheckCeleb {
 
     public static boolean knows(int[][] party, int a, int b) {
-        return party[a][b] == 1 ? true: false;
+        return party[a][b] == 1 ? true : false;
     }
 
     public static int findCelebrity(int[][] party, int numPeople) {
@@ -17,7 +17,7 @@ public class CheckCeleb {
 
         while (!stack.isEmpty()) {
             int a = stack.pop();
-            
+
             if (stack.isEmpty()) {
                 celebrity = a;
                 break;
@@ -25,16 +25,16 @@ public class CheckCeleb {
 
             int b = stack.pop();
 
-            if (knows(party, a,b))
+            if (knows(party, a, b))
                 stack.push(b);
-            else 
+            else
                 stack.push(a);
         }
 
         for (int i = 0; i < numPeople; i++) {
 
-            if ((i != celebrity) && (knows(party, celebrity, i) || !knows(party, i, celebrity))) 
-              return -1; 
+            if ((i != celebrity) && (knows(party, celebrity, i) || !knows(party, i, celebrity)))
+                return -1;
         }
 
         return celebrity;
@@ -42,18 +42,16 @@ public class CheckCeleb {
 
     public static void main(String[] args) {
 
-        int MATRIX[][] = { { 0, 0, 1, 0 }, 
-                            { 0, 0, 0, 0 }, 
-                            { 0, 0, 1, 0 },  
-                            { 0, 0, 1, 0 } }; 
+        int MATRIX[][] = {{0, 0, 1, 0},
+                {0, 0, 0, 0},
+                {0, 0, 1, 0},
+                {0, 0, 1, 0}};
 
-        int n = 4; 
+        int n = 4;
         int result = CheckCeleb.findCelebrity(MATRIX, n);
-        if (result == -1)  
-        { 
-            System.out.println("No Celebrity"); 
-        }  
-        else
-            System.out.println("Celebrity ID " +  result); 
+        if (result == -1) {
+            System.out.println("No Celebrity");
+        } else
+            System.out.println("Celebrity ID " + result);
     }
 }

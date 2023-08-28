@@ -1,13 +1,13 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 
 /*
-* Challenge 10: Rearrange Sorted Array in Max/Min Form
-*
-* Arrange elements in such a way that the maximum element appears at first, then minimum at second, 
-* then second maximum at the third position and second minimum at fourth and so on.
-*
-* author francesco giordano 
-*/
+ * Challenge 10: Rearrange Sorted Array in Max/Min Form
+ *
+ * Arrange elements in such a way that the maximum element appears at first, then minimum at second,
+ * then second maximum at the third position and second minimum at fourth and so on.
+ *
+ * author francesco giordano
+ */
 class CheckMaxMin {
 
     /*
@@ -115,25 +115,25 @@ class CheckMaxMin {
     }
 
     public static void main(String args[]) {
-        int[] arr = { 1, 2, 3, 4, 5, 6, 8, 10 };
+        int[] arr = {1, 2, 3, 4, 5, 6, 8, 10};
         CheckMaxMin.maxMin(arr);
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-        int[] arr2 = { 1, 2, 3, 4, 5, 6, 8, 10 };
+        int[] arr2 = {1, 2, 3, 4, 5, 6, 8, 10};
         CheckMaxMin.maxMin(arr2);
         for (int i = 0; i < arr2.length; i++) {
             System.out.print(arr2[i] + " ");
         }
         System.out.println();
-        int[] arr3 = { 1, 2, 3, 4, 5, 6, 8, 10 };
+        int[] arr3 = {1, 2, 3, 4, 5, 6, 8, 10};
         CheckMaxMin.maxMin2(arr3);
         for (int i = 0; i < arr3.length; i++) {
             System.out.print(arr3[i] + " ");
         }
         System.out.println();
-        int[] arr4 = { 1, 2, 3, 4, 5 };
+        int[] arr4 = {1, 2, 3, 4, 5};
         CheckMaxMin.maxMin3(arr4);
         for (int i = 0; i < arr4.length; i++) {
             System.out.print(arr4[i] + " ");

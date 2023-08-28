@@ -1,8 +1,8 @@
 package codility;
 
 /*
-*  Fix the following code. Note: Data set limited to 100000. 
-*/
+ *  Fix the following code. Note: Data set limited to 100000.
+ */
 public class fixLessThanValue {
 
     public static int solution(int[] A) {
@@ -17,7 +17,7 @@ public class fixLessThanValue {
     }
 
     public static void main(String[] args) {
-        int[] arr = { -1, 1, -2, 2 };
+        int[] arr = {-1, 1, -2, 2};
         System.out.println(fixLessThanValue.solution(arr));
     }
 

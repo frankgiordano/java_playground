@@ -1,27 +1,27 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.graph;
 
 import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.linkedlist.Node;
-import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack.*;
+import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack.myStack;
 
 /**
  * Implement a DFS traversal of a graph structure
- * 
+ * <p>
  * author Francesco Giordano
  */
 public class CheckDFS {
 
     public static String dfsTraversal(myGraph g, int source) {
-       String result = "";
-       int num_of_vertices = g.vertices;
-       
-       boolean[] visited = new boolean[num_of_vertices];
+        String result = "";
+        int num_of_vertices = g.vertices;
 
-       myStack stack = new myStack(num_of_vertices);
+        boolean[] visited = new boolean[num_of_vertices];
 
-       stack.push(source);
-       visited[source] = true;
-       
-       while (!stack.isEmpty()) {
+        myStack stack = new myStack(num_of_vertices);
+
+        stack.push(source);
+        visited[source] = true;
+
+        while (!stack.isEmpty()) {
 
             int current_node = stack.pop();
             System.out.println("popping = " + current_node);
@@ -40,8 +40,8 @@ public class CheckDFS {
 
                 finger = finger.nextElement;
             }
-       }
-       return result;
+        }
+        return result;
     }
 
     public static void main(String[] args) {

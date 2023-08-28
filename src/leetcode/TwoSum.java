@@ -25,9 +25,7 @@ public class TwoSum {
         int[] result = new int[2];
 
         for (int i = 0; i < nums.length; i++) {
-
             for (int j = 0; j < nums.length; j++) {
-
                 if (j == i)
                     continue;
 
@@ -68,19 +66,18 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-        int[] input = { 2, 7, 11, 15 };
+        int[] input = {2, 7, 11, 15};
 
         input = TwoSum.getTwoSum(input, 9);
         for (int i : input) {
             System.out.println(i);
         }
         System.out.println();
-        int[] input2 = { 3, 2, 4 };
+        int[] input2 = {3, 2, 4};
         input2 = TwoSum.getTwoSum2(input2, 6);
         for (int i : input2) {
             System.out.println(i);
         }
-
     }
 
 }

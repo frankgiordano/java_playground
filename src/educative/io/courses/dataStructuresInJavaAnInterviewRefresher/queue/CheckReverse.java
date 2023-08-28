@@ -4,7 +4,7 @@ import educative.io.courses.dataStructuresInJavaAnInterviewRefresher.stack.mySta
 
 /**
  * Reversing First k Elements of Queue
- * 
+ * <p>
  * author Francesco Giordano
  */
 public class CheckReverse {
