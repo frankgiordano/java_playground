@@ -20,7 +20,7 @@ author francesco giordano
 public class ReverseSentence {
     public static String reverseWords(String s) {
 
-        // if nothing is sent in return an emptry string
+        // if nothing is sent in return an empty string
         if (s == null || s.length() == 0)
             return "";
 
@@ -28,7 +28,8 @@ public class ReverseSentence {
         int size = s.length(); // this is the size of the entire sentence
         char[] arr = s.toCharArray(); // convert String to char array for easier handling
 
-        for (int j = 0; j < size; j++) { // inspect entire sentence char array
+        // inspect entire sentence char array
+        for (int j = 0; j < size; j++) {
 
             // look for a space, if found then you may have found a word, reverse the word
             if (arr[j] == ' ') {
@@ -64,7 +65,8 @@ public class ReverseSentence {
         int i = 0; // this holds the index value of the first char of a word
         int size = arr.length; // this is the size of the entire sentence
 
-        for (int j = 0; j < size; j++) { // inspect entire sentence char array
+        // inspect entire sentence char array
+        for (int j = 0; j < size; j++) {
 
             // look for a space, if found then you may have found a word, reverse the word
             if (arr[j] == ' ') {
@@ -103,7 +105,7 @@ public class ReverseSentence {
         int end = -1;
         int size = arr.length - 1;
 
-        // i variable will hold current index that trasverses the input
+        // i variable will hold current index that transverses the input
         // end variable uses i to set the current end index value of
         // the current word
         int i = size;
@@ -158,4 +160,5 @@ public class ReverseSentence {
         System.out.println(ReverseSentence.reverseWords(input));
         System.out.println(ReverseSentence.reverseWords3(input));
     }
+    
 }
