@@ -31,14 +31,11 @@ Explanation:
 public class HappyNumber {
 
     public static boolean isHappy(int n) {
-
         Set<Integer> seenNums = new HashSet<>();
 
         while (!seenNums.contains(n)) {
             seenNums.add(n);
-
             n = getSquaredSum(n);
-            System.out.println(n);
             if (n == 1)
                 return true;
         }
@@ -47,10 +44,12 @@ public class HappyNumber {
     }
 
     public static int getSquaredSum(int n) {
-        if (n == 1)
+        if (n == 1) {
             return 1;
-        if (n == 0)
+        }
+        if (n == 0) {
             return 0;
+        }
 
         int sum = 0;
         while (n > 0) {
@@ -64,4 +63,5 @@ public class HappyNumber {
     public static void main(String[] args) {
         System.out.println(HappyNumber.isHappy(3));
     }
+
 }

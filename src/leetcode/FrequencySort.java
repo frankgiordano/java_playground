@@ -40,16 +40,14 @@ public class FrequencySort {
             }
         }
 
-        PriorityQueue<Character> pQueue = new PriorityQueue<Character>((a, b) -> charFreq.get(b) - charFreq.get(a));
+        PriorityQueue<Character> pQueue = new PriorityQueue<>((a, b) -> charFreq.get(b) - charFreq.get(a));
         pQueue.addAll(charFreq.keySet());
 
-        StringBuilder result = new StringBuilder("");
+        StringBuilder result = new StringBuilder();
         while (!pQueue.isEmpty()) {
             Character c = pQueue.poll();
             int count = charFreq.get(c);
-            for (int i = 0; i < count; i++) {
-                result.append(c);
-            }
+            result.append(String.valueOf(c).repeat(Math.max(0, count)));
         }
 
         return result.toString();
@@ -64,16 +62,14 @@ public class FrequencySort {
             charFreq.put(s.charAt(i), ++count);
         }
 
-        PriorityQueue<Character> pQueue = new PriorityQueue<Character>((a, b) -> charFreq.get(b) - charFreq.get(a));
+        PriorityQueue<Character> pQueue = new PriorityQueue<>((a, b) -> charFreq.get(b) - charFreq.get(a));
         pQueue.addAll(charFreq.keySet());
 
-        StringBuilder result = new StringBuilder("");
+        StringBuilder result = new StringBuilder();
         while (!pQueue.isEmpty()) {
             Character c = pQueue.poll();
             int count = charFreq.get(c);
-            for (int i = 0; i < count; i++) {
-                result.append(c);
-            }
+            result.append(String.valueOf(c).repeat(Math.max(0, count)));
         }
 
         return result.toString();

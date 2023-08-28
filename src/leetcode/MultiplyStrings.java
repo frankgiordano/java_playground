@@ -14,13 +14,12 @@ author francesco giordano
 public class MultiplyStrings {
 
     public String multiplyStrings(String n1, String n2) {
-
         // time = O(n + m)
 
         if (n1 == null || n2 == null) {
             return "";
-        } else if (n1.length() == 0 || n2.length() == 0) {
-            return n1.length() == 0 ? n2 : n1;
+        } else if (n1.isEmpty() || n2.isEmpty()) {
+            return n1.isEmpty() ? n2 : n1;
         } else if (n1.equals("0") || n2.equals("0")) {
             return "0";
         }
@@ -55,9 +54,7 @@ public class MultiplyStrings {
         }
 
         // avoid lead zeros when populating new string result to return
-        boolean leadZeroFlag = false;
-        if (product[0] == 0)
-            leadZeroFlag = true;
+        boolean leadZeroFlag = product[0] == 0;
         for (int i = 0; i < size; i++) {
             if (product[i] == 0 && leadZeroFlag) {
                 continue;
@@ -73,4 +70,5 @@ public class MultiplyStrings {
         MultiplyStrings multiply = new MultiplyStrings();
         System.out.println(multiply.multiplyStrings("123", "456"));
     }
+
 }

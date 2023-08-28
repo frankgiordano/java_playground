@@ -17,11 +17,11 @@ example [2, 1, 2, 1] = a
     
 2 - 1 = 1
     index = 1
-    a[1] = 1 is it visited less then 0? no = marked as -1
+    a[1] = 1 is it visited less than 0? no = marked as -1
 
 1 - 1 = 0
     index = 0
-    a[0] = 2 is it visited less then 0? no = marked as -2
+    a[0] = 2 is it visited less than 0? no = marked as -2
     
 2 - 1 = 1
     index = 1
@@ -50,11 +50,8 @@ public class FindDuplicates {
     }
 
     public static void main(String args[]) {
-
         int[] input = {4, 3, 2, 7, 8, 2, 3, 1};
-
         List<Integer> result = FindDuplicates.findDups(input);
-
         for (Integer i : result)
             System.out.print(i + " ");
     }

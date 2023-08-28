@@ -15,7 +15,6 @@ and O(n) runtime complexity?
 public class MissingNumber {
 
     public static int getMissingNumber1(int[] nums) {
-
         // O(n) - time
         // O(1) - space
 
@@ -35,31 +34,28 @@ public class MissingNumber {
         int totalXor = 0;
         int numsXor = 0;
 
-        for (int i = 0; i <= nums.length; i++)
+        for (int i = 0; i <= nums.length; i++) {
             totalXor ^= i;
-        for (int i : nums)
+        }
+        for (int i : nums) {
             numsXor ^= i;
+        }
 
         return (totalXor ^ numsXor);
     }
 
     public static int getMissingNumber2(int[] nums) {
-
         // O(n) - time
         // 0(n) - space
 
         boolean[] status = new boolean[nums.length + 1];
 
-        for (int i = 0; i < status.length; i++) {
-            status[i] = false;
-        }
-
-        for (int i = 0; i < nums.length; i++) {
-            status[nums[i]] = true;
+        for (final int num : nums) {
+            status[num] = true;
         }
 
         for (int i = 0; i < status.length; i++) {
-            if (status[i] == false)
+            if (!status[i])
                 return i;
         }
 
@@ -67,20 +63,18 @@ public class MissingNumber {
     }
 
     public static int getMissingNumber3(int[] nums) {
-
         // sort
         // n(nlogn) - time slower but less space
         // n(1) - space
 
         Arrays.sort(nums);
 
-        if (nums[0] == 0 && nums.length == 1)
+        if (nums[0] == 0 && nums.length == 1) {
             return 1;
+        }
 
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0)
-                continue;
-            else if (nums[i] != i)
+            if (nums[i] != i)
                 return i;
         }
 
@@ -88,27 +82,26 @@ public class MissingNumber {
     }
 
     public static int getMissingNumber4(int[] nums) {
-
         // O(n) - time
         // O(1) - space
-
         int totalSum = 0;
-
-        for (int i = 0; i < nums.length; i++) {
-            totalSum += nums[i];
+        for (final int num : nums) {
+            totalSum += num;
         }
-
         return (totalSum / nums.length);
     }
 
     public static void main(String[] args) {
-
         int[] input = {0, 1, 3, 4};
-
+        int[] input2 = {0, 1, 2, 3, 4, 6};
+        // output is 2
         System.out.println(MissingNumber.getMissingNumber1(input));
-        System.out.println(MissingNumber.getMissingNumber2(input));
+        // output is 5
+        System.out.println(MissingNumber.getMissingNumber2(input2));
+        // output is 2
         System.out.println(MissingNumber.getMissingNumber3(input));
-        System.out.println(MissingNumber.getMissingNumber4(input));
+        // output is 5
+        System.out.println(MissingNumber.getMissingNumber3(input2));
     }
 
 }

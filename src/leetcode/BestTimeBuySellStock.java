@@ -32,7 +32,6 @@ public class BestTimeBuySellStock {
 
             for (int j = i; j < prices.length; j++) {
                 int sell = prices[j];
-
                 int value = sell - buy;
                 if (value > max)
                     max = value;
@@ -48,11 +47,11 @@ public class BestTimeBuySellStock {
     public static int maxProfit2(int[] prices) {
         int max = 0;
         int min = Integer.MAX_VALUE;
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < min) {
-                min = prices[i];
+        for (final int price : prices) {
+            if (price < min) {
+                min = price;
             } else {
-                max = Math.max(max, prices[i] - min);
+                max = Math.max(max, price - min);
             }
         }
         return max;

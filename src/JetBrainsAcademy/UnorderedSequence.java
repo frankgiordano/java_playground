@@ -66,7 +66,9 @@ public class UnorderedSequence {
         boolean ascending = previousInt < nums[1];
         boolean descending = previousInt > nums[1];
         for (int i = 0; i < size; i++) {
-            if (nums[i] == 0) break;
+            if (nums[i] == 0) {
+                break;
+            }
             if (ascending && !(previousInt <= nums[i])) {
                 System.out.println("false");
                 return;

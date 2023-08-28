@@ -14,7 +14,7 @@ public class ExtractNextHighestNumber {
     public static String numPlusOne(String str) {
 
         int currNum = 0;
-        String newNum = "";
+        String newNum;
 
         int index = str.length() - 1;
         char c = str.charAt(index);
@@ -22,18 +22,20 @@ public class ExtractNextHighestNumber {
             c = str.charAt(--index);
         }
 
-        for (int i = index + 1; i < str.length(); i++)
+        for (int i = index + 1; i < str.length(); i++) {
             currNum = currNum * 10 + Character.getNumericValue(str.charAt(i));
+        }
 
         newNum = String.valueOf(currNum + 1);
 
-        if (currNum < 9)
+        if (currNum < 9) {
             return "0" + newNum;
-        else
+        } else {
             return newNum;
+        }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         System.out.println(ExtractNextHighestNumber.numPlusOne("d1411"));
     }
 

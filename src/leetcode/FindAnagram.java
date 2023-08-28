@@ -11,8 +11,9 @@ public class FindAnagram {
         // O(n) - time
         // O(n) - space
 
-        if (str1.length() != str2.length())
+        if (str1.length() != str2.length()) {
             return false;
+        }
 
         char[] charArray1 = str1.toCharArray();
         char[] charArray2 = str2.toCharArray();
@@ -29,8 +30,9 @@ public class FindAnagram {
         }
 
         for (int i = 0; i < ASCII_NUMS; i++) {
-            if (count1[i] != count2[i])
+            if (count1[i] != count2[i]) {
                 return false;
+            }
         }
 
         return true;
@@ -40,8 +42,9 @@ public class FindAnagram {
 
         // O(nlogn) - time
 
-        if (str1.length() != str2.length())
+        if (str1.length() != str2.length()) {
             return false;
+        }
 
         char[] charArray1 = str1.toCharArray();
         char[] charArray2 = str2.toCharArray();
@@ -51,22 +54,20 @@ public class FindAnagram {
 
         str1 = String.valueOf(charArray1);
         str2 = String.valueOf(charArray2);
-        if (!str1.equals(str2))
-            return false;
 
-        return true;
+        return str1.equals(str2);
     }
 
     public static boolean isAnagram3(String str1, String str2) {
 
         // O(n * m) - time - brute force
 
-        if (str1.length() != str2.length())
+        if (str1.length() != str2.length()) {
             return false;
+        }
 
         int[] countChars = new int[ASCII_NUMS];
-        for (int i = 0; i < ASCII_NUMS; i++)
-            countChars[i] = '0';
+        Arrays.fill(countChars, '0');
 
         boolean found = true;
         for (int i = 0; i < str1.length(); i++) {
@@ -75,8 +76,9 @@ public class FindAnagram {
                 return false;
             }
             countChars[char1] += 1;
-            if (!found)
+            if (!found) {
                 return false;
+            }
             for (int j = 0; j < str2.length(); j++) {
                 char char2 = str2.charAt(j);
                 if (char1 == char2) {
@@ -92,7 +94,6 @@ public class FindAnagram {
     }
 
     public static void main(String[] args) {
-
         System.out.println(FindAnagram.isAnagram1("frank", "frakn"));
         System.out.println(FindAnagram.isAnagram1("frankk", "frakn"));
         System.out.println(FindAnagram.isAnagram1("K", "k"));

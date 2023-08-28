@@ -20,32 +20,32 @@ If no valid conversion could be performed, a zero value is returned.
 author: francesco giordano
 */
 public class MyAtoi {
+
     public static int atoi(String str) {
         str = str.trim();
-        if (isValid(str) == false)
+        if (!isValid(str)) {
             return 0;
+        }
 
         str = convertToValidString(str);
-
         return convertStringToNum(str);
     }
 
     private static int convertStringToNum(String str) {
-
-        if (str.length() == 0)
+        if (str.isEmpty()) {
             return 0;
+        }
 
-        int num = 0;
+        int num;
 
         if (str.charAt(0) == '-' || str.charAt(0) == '+') {
-
             if (str.length() == 1)
                 return 0;
             // minus = true;
             try {
                 return Integer.parseInt(str);
             } catch (NumberFormatException e) {
-                return Integer.MAX_VALUE + 1;
+                return Integer.MAX_VALUE;
             }
         } else {
             try {
@@ -60,22 +60,26 @@ public class MyAtoi {
 
     private static boolean isValid(String s) {
         s = s.trim();
-        if (s.length() == 0)
+        if (s.isEmpty()) {
             return false;
+        }
 
         char firstChar = s.charAt(0);
         char secondChar = 0;
 
-        if (s.length() > 1)
+        if (s.length() > 1) {
             secondChar = s.charAt(1);
+        }
 
-        if (firstChar > 39 && firstChar < 58)
+        if (firstChar > 39 && firstChar < 58) {
             return true;
+        }
 
         if ((firstChar == '-' || firstChar == '+') && !(secondChar == '-' || secondChar == '+')) {
             return true;
-        } else
+        } else {
             return false;
+        }
     }
 
     private static String convertToValidString(String s) {
@@ -91,15 +95,15 @@ public class MyAtoi {
 
         int j = 0;
         int i = 0;
-        if (foundMinusOrPlus == true) {
+        if (foundMinusOrPlus) {
             i = 1;
             j = 1;
         }
 
         for (; i < s.length(); i++) {
-
-            if (s.charAt(i) == ' ' || s.charAt(i) == '.' || !(s.charAt(i) > '0' && s.charAt(i) < '9'))
+            if (s.charAt(i) == ' ' || s.charAt(i) == '.' || !(s.charAt(i) > '0' && s.charAt(i) < '9')) {
                 break;
+            }
 
             if (s.charAt(i) > '0' && s.charAt(i) < '9') {
                 num[j++] = s.charAt(i);
@@ -114,4 +118,5 @@ public class MyAtoi {
     public static void main(String[] args) {
         System.out.println(MyAtoi.atoi("-214748-3648"));
     }
+
 }

@@ -32,15 +32,13 @@ public class CombinationSum {
 
     private static List<List<Integer>> combinationSum(int[] input, int target) {
         List<List<Integer>> results = new ArrayList<>();
-
         if (input == null || input.length == 0) {
             return results;
         }
 
-        List<Integer> combinations = new ArrayList<>();
-
         Arrays.sort(input);
 
+        List<Integer> combinations = new ArrayList<>();
         findCombinations(results, input, combinations, target, 0);
         return results;
     }
@@ -53,9 +51,9 @@ public class CombinationSum {
         }
 
         for (int i = startIndex; i < input.length; i++) {
-            if (input[i] > target)
+            if (input[i] > target) {
                 break;
-
+            }
             combination.add(input[i]);
             int newTarget = target - input[i];
             findCombinations(results, input, combination, newTarget, i);
@@ -64,12 +62,9 @@ public class CombinationSum {
     }
 
     public static void main(String[] args) {
-
         int[] input = {2, 3, 6, 7};
         List<List<Integer>> results = combinationSum(input, 7);
-        results.forEach(i -> {
-            System.out.println(i);
-        });
+        results.forEach(System.out::println);
     }
 
 }

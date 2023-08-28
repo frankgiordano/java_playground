@@ -33,7 +33,7 @@ public class FirstUniqueChar {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
 
-            // lets use the java 8 way!!
+            // let's use the java 8 way!!
             letters.compute(c, (k, v) -> (v == null) ? 1 : ++v);
             // if (letters.containsKey(c)) {
             //     int count = letters.get(c);
@@ -47,8 +47,9 @@ public class FirstUniqueChar {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             int count = letters.get(c);
-            if (count == 1)
+            if (count == 1) {
                 return i;
+            }
         }
 
         return -1;
@@ -67,8 +68,9 @@ public class FirstUniqueChar {
         }
 
         for (int i = 0; i < s.length(); i++) {
-            if (chars[s.charAt(i) - 'a'] == 1)
+            if (chars[s.charAt(i) - 'a'] == 1) {
                 return i;
+            }
         }
 
         return -1;

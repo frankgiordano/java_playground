@@ -25,23 +25,24 @@ public class ArithmeticAverage {
         String[] inputs = input.split(" ");
         int size = inputs.length;
 
-        if (size == 1 || size > 2)
+        if (size == 1 || size > 2) {
             throw new Exception("Provided a string without two numbers only, try again...");
+        }
 
         int num1 = Integer.parseInt(inputs[0]);
         int num2 = Integer.parseInt(inputs[1]);
 
         List<Integer> nums = new ArrayList<>();
-
         int candidate = num1;
         while (candidate <= num2) {
-            if (candidate % 3 == 0)
+            if (candidate % 3 == 0) {
                 nums.add(candidate);
+            }
             candidate++;
         }
 
         IntSummaryStatistics stats = nums.stream().mapToInt((x) -> x).summaryStatistics();
-        return Double.valueOf(stats.getAverage());
+        return stats.getAverage();
     }
 
     public static double solution2(String input) throws Exception {
@@ -58,8 +59,9 @@ public class ArithmeticAverage {
 
         int candidate = num1;
         while (candidate <= num2) {
-            if (candidate % 3 == 0)
+            if (candidate % 3 == 0) {
                 nums.add(candidate);
+            }
             candidate++;
         }
 

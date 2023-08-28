@@ -9,7 +9,6 @@ public class ExtractStringWithValue {
     public static final String DELIMITER = ",";
 
     public static String getStringWithValue(String parameter, String content) {
-
         if (!parameter.contains("=")) {
             return "";
         }
@@ -17,8 +16,9 @@ public class ExtractStringWithValue {
         int index = content.indexOf(parameter);
         String subStr = content.substring(index);
         int lastIndex = subStr.length();
-        if (subStr.indexOf(DELIMITER) != -1)
+        if (subStr.contains(DELIMITER)) {
             lastIndex = subStr.indexOf(DELIMITER);
+        }
 
         return subStr.substring(0, lastIndex);
     }
