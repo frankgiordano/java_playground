@@ -32,7 +32,7 @@ public class HappyNumber {
 
     public static boolean isHappy(int n) {
 
-        Set<Integer> seenNums = new HashSet<Integer>();
+        Set<Integer> seenNums = new HashSet<>();
 
         while (!seenNums.contains(n)) {
             seenNums.add(n);

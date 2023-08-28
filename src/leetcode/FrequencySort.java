@@ -28,7 +28,7 @@ public class FrequencySort {
 
     public static String sort(String s) {
 
-        Map<Character, Integer> charFreq = new HashMap<Character, Integer>();
+        Map<Character, Integer> charFreq = new HashMap<>();
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -57,7 +57,7 @@ public class FrequencySort {
 
     public static String sort2(String s) {
 
-        Map<Character, Integer> charFreq = new HashMap<Character, Integer>();
+        Map<Character, Integer> charFreq = new HashMap<>();
 
         for (int i = 0; i < s.length(); i++) {
             int count = charFreq.getOrDefault(s.charAt(i), 0);

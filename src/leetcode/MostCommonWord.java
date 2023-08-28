@@ -27,8 +27,8 @@ public class MostCommonWord {
         if (paragraph == null || paragraph.isEmpty())
             return "";
 
-        Map<String, Integer> words = new HashMap<String, Integer>();
-        Set<String> bannedSet = new HashSet<String>();
+        Map<String, Integer> words = new HashMap<>();
+        Set<String> bannedSet = new HashSet<>();
         int size = paragraph.length();
 
         for (int i = 0; i < banned.length && i < 100; i++)

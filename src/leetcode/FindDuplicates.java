@@ -34,7 +34,7 @@ author francesco giordano
 public class FindDuplicates {
 
     public static List<Integer> findDups(int[] nums) {
-        Set<Integer> result = new HashSet<Integer>();
+        Set<Integer> result = new HashSet<>();
 
         // [2, 1, 2, 1]
         for (int i = 0; i < nums.length; i++) {

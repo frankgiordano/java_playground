@@ -27,7 +27,7 @@ public class PhoneNumberStringCombs {
      * uses a String array as HashMap value.
      */
     public static List<String> letterCombinations1(String digits) {
-        LinkedList<String> lst = new LinkedList<String>();
+        LinkedList<String> lst = new LinkedList<>();
 
         if (digits == null || digits.isEmpty())
             return lst;
@@ -35,7 +35,7 @@ public class PhoneNumberStringCombs {
         if (digits.length() == 1 && "1".equals(digits))
             return lst;
 
-        HashMap<String, String[]> dialPad = new HashMap<String, String[]>();
+        HashMap<String, String[]> dialPad = new HashMap<>();
 
         String[] letters2 = { "a", "b", "c" };
         dialPad.put("2", letters2);
@@ -61,7 +61,7 @@ public class PhoneNumberStringCombs {
             String key = String.valueOf(digits.charAt(i));
             String[] values = dialPad.get(key);
 
-            LinkedList<String> tmp = new LinkedList<String>();
+            LinkedList<String> tmp = new LinkedList<>();
             while (lst.peek() != null) {
                 String item = lst.pop();
                 for (int j = 0; j < values.length; j++) {
@@ -87,7 +87,7 @@ public class PhoneNumberStringCombs {
         if (digits == null || digits.isEmpty())
             return new ArrayList<>(list);
 
-        Map<Character, String> numbers = new HashMap<Character, String>();
+        Map<Character, String> numbers = new HashMap<>();
         numbers.put('0', "0");
         numbers.put('1', "1");
         numbers.put('2', "abc");
@@ -114,7 +114,7 @@ public class PhoneNumberStringCombs {
 
                 // add each letter of letters to the queue
                 for (int j = 0; j < letters.length(); j++) {
-                    list.add(combo + Character.toString(letters.charAt(j)));
+                    list.add(combo + letters.charAt(j));
                 }
             }
         }
@@ -181,7 +181,7 @@ public class PhoneNumberStringCombs {
      * high memory and cpu usage due to string + of a char
      */
     public static List<String> letterCombinations4(String digits) {
-        LinkedList<String> lst = new LinkedList<String>();
+        LinkedList<String> lst = new LinkedList<>();
 
         if (digits == null || digits.isEmpty())
             return lst;
@@ -222,7 +222,7 @@ public class PhoneNumberStringCombs {
      * This version using StringBuilder and provides the best leetcode results!
      */
     public static List<String> letterCombinations5(String digits) {
-        LinkedList<String> lst = new LinkedList<String>();
+        LinkedList<String> lst = new LinkedList<>();
 
         if (digits == null || digits.isEmpty())
             return lst;
@@ -246,8 +246,8 @@ public class PhoneNumberStringCombs {
             while (lst.peek().length() == i) {
                 String item = lst.pop();
 
+                StringBuilder str = new StringBuilder();
                 for (int j = 0; j < values.length(); j++) {
-                    StringBuilder str = new StringBuilder();
                     str.append(item);
                     str.append(values.charAt(j));
                     lst.add(str.toString());

@@ -27,7 +27,7 @@ public class FirstUniqueChar {
 
         // time O(n) + O(n) = n + n = 2n = O(n)
         // space O(n)
-        Map<Character, Integer> letters = new HashMap<Character, Integer>();
+        Map<Character, Integer> letters = new HashMap<>();
 
         // time O(n)
         for (int i = 0; i < s.length(); i++) {

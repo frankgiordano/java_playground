@@ -32,7 +32,7 @@ public class LongestSubString {
         if (s == null || s.length() == 0)
             return 0;
 
-        Set<Character> characters = new HashSet<Character>();
+        Set<Character> characters = new HashSet<>();
         int maxLength = 0;
         int currLength = 0;
 
@@ -68,7 +68,7 @@ public class LongestSubString {
         int j = 0;
         int max = 0;
 
-        Set<Character> characters = new HashSet<Character>();
+        Set<Character> characters = new HashSet<>();
 
         int count = 0;
         while (j < s.length()) {
@@ -105,7 +105,7 @@ public class LongestSubString {
         int j = 0;
         int max = 0;
 
-        Set<Character> characters = new HashSet<Character>();
+        Set<Character> characters = new HashSet<>();
 
         while (j < s.length()) {
             if (!characters.contains(s.charAt(j))) {
