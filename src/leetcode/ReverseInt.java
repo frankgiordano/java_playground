@@ -18,13 +18,16 @@ integer overflows.
 author francesco giordano
  */
 public class ReverseInt {
+    
     public static int reverse(int x) {
 
-        if (x < 10 && x > -10)
-            return x; // means one digit sent nothing to reverse
+        // means one digit sent nothing to reverse
+        if (x < 10 && x > -10) {
+            return x;
+        }
 
         List<Integer> nums = new ArrayList<>();
-        int nextInt = 0;
+        int nextInt;
 
         while (x != 0) {
             nextInt = x % 10;
@@ -33,9 +36,9 @@ public class ReverseInt {
         }
 
         long sum = 0;
-        for (int i = 0; i < nums.size(); i++) {
+        for (Integer num : nums) {
             try {
-                sum = sum * 10 + nums.get(i);
+                sum = sum * 10 + num;
             } catch (NumberFormatException e) {
                 return 0;
             }
@@ -47,11 +50,12 @@ public class ReverseInt {
         return (int) sum;
     }
 
-    public static int reverse1(int x) {
+    public static int reverse2(int x) {
 
         // means one digit sent nothing to reverse
-        if (x < 10 && x > -10)
+        if (x < 10 && x > -10) {
             return x;
+        }
 
         long sum = 0;
         while (x != 0) {
@@ -66,6 +70,12 @@ public class ReverseInt {
     }
 
     public static void main(String[] args) {
+        // returns zero as value is beyond maximum int value
         System.out.println(ReverseInt.reverse(1534236469));
+        // returns 21
+        System.out.println(ReverseInt.reverse(12));
+        // return 23
+        System.out.println(ReverseInt.reverse2(32));
     }
+
 }
