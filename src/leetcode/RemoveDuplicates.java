@@ -22,7 +22,6 @@ public class RemoveDuplicates {
         // space O(n)
         // time O(n+m)
         // this is slow compare to the method below
-
         LinkedHashSet<Integer> uniqueNums = new LinkedHashSet<>();
         for (Integer num : nums)
             uniqueNums.add(num);
@@ -40,20 +39,18 @@ public class RemoveDuplicates {
         // space O(1)
         // time O(n)
 
-        // this is a perfect solution to use the two pointer method..
+        // this is a perfect solution to use the two pointer method...
         // with slow and fast pointers.
         // fast pointer will expand and keep on looking ahead until it finds
         // a number not equal to the current slow pointer and this will be
-        // non-duplicate.. which at this point perform a replacement of the
+        // non-duplicate... which at this point perform a replacement of the
         // item at slow++ and search via fast point for the next one.
-
         if (nums.length == 1)
             return 1;
 
         int fastIndex = 1;
         int slowIndex = 0;
         while (fastIndex < nums.length) {
-
             if (nums[slowIndex] != nums[fastIndex]) {
                 slowIndex++;
                 nums[slowIndex] = nums[fastIndex];
@@ -68,12 +65,15 @@ public class RemoveDuplicates {
         int[] input = {1, 1, 2, 2, 3, 4, 5, 5};
         int len;
         len = RemoveDuplicates.removeDuplicates(input);
-        for (int i = 0; i < len; i++)
+        for (int i = 0; i < len; i++) {
             System.out.println(input[i]);
+        }
         System.out.println();
         int[] input2 = {1, 1, 2, 2, 3, 4, 5, 5};
         len = RemoveDuplicates.removeDuplicates2(input2);
-        for (int i = 0; i < len; i++)
+        for (int i = 0; i < len; i++) {
             System.out.println(input2[i]);
+        }
     }
+
 }
