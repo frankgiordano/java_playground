@@ -17,7 +17,7 @@ Open brackets must be closed in the correct order.
 public class ValidParaentheses {
 
     public static boolean isValid(String s) {
-        if (s.length() == 0 || s.length() == 1)
+        if (s.isEmpty() || s.length() == 1)
             return false;
 
         Stack<Character> stack = new Stack<>();
