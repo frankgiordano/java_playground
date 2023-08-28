@@ -15,7 +15,7 @@ public class ValidPalindrome {
 
     public static boolean isPalindrome(String s) {
 
-        if (s == null || s.length() == 0)
+        if (s == null || s.isEmpty())
             return true;
 
         int i = 0;
