@@ -18,31 +18,29 @@ public class CheckFirstUnique {
         boolean isRepeat = false;
 
         for (int i = 0; i < arr.length; i++) {
-
             for (int k = 0; k < arr.length; k++) {
-
                 if (arr[i] == arr[k] && i != k)
                     isRepeat = true;
-
             }
 
-            if (isRepeat == false)
+            if (!isRepeat) {
                 return arr[i];
+            }
 
             isRepeat = false;
         }
+
         return -1;
     }
 
     // using java'a map interface..
-    public static int findFirstUnique2(int[] arr) { // O(n) time
-
-        Map<Integer, Integer> nums = new HashMap<Integer, Integer>();
-
-        if (arr == null)
+    public static int findFirstUnique2(int[] arr) {
+        // O(n) time
+        if (arr == null) {
             return 0;
+        }
 
-        int result = 0;
+        Map<Integer, Integer> nums = new HashMap<>();
 
         for (int num : arr) {
             if (nums.containsKey(num)) {
@@ -59,7 +57,7 @@ public class CheckFirstUnique {
                 return num;
         }
 
-        return result;
+        return -1;
     }
 
     public static void main(String[] args) {

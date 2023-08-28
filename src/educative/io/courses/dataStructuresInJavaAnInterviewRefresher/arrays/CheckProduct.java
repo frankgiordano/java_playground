@@ -1,5 +1,7 @@
 package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 
+import java.util.Arrays;
+
 /*
  * Challenge 4: Array of Products of All Elements Except Itself
  *
@@ -11,9 +13,9 @@ public class CheckProduct {
 
     // brute force O(n^)
     public static int[] findProduct(int[] arr) {
-
-        if (arr == null)
+        if (arr == null) {
             return null;
+        }
 
         int[] result = new int[arr.length];
 
@@ -30,16 +32,15 @@ public class CheckProduct {
     }
 
     // O(n) from educative.io solution
-    public static int[] findProduct2(int arr[]) {
+    public static int[] findProduct2(int[] arr) {
         int n = arr.length;
         int i, temp = 1;
 
         // Allocation of result array
-        int result[] = new int[n];
+        int[] result = new int[n];
 
         // Initializing the result array by 1
-        for (int j = 0; j < n; j++)
-            result[j] = 1;
+        Arrays.fill(result, 1);
 
         // Product of elements on left side excluding arr[i]
         for (i = 0; i < n; i++) {
@@ -60,8 +61,10 @@ public class CheckProduct {
     }
 
     public static void main(String[] args) {
-
         int[] arr = {1, 2, 3, 4};
+        arr = CheckProduct.findProduct(arr);
+        for (int num : arr)
+            System.out.print(num + " ");
         arr = CheckProduct.findProduct2(arr);
         for (int num : arr)
             System.out.print(num + " ");

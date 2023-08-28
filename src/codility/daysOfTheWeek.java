@@ -1,6 +1,7 @@
 package codility;
 
 public class daysOfTheWeek {
+
     public static String solution(String S, int K) {
 
         String[] daysOfTheWeek = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
@@ -53,4 +54,5 @@ public class daysOfTheWeek {
         System.out.println(daysOfTheWeek.solution("Wed", 2));
         System.out.println(daysOfTheWeek.solution("Sat", 23));
     }
+
 }

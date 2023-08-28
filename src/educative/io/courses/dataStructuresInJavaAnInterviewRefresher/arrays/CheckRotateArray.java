@@ -20,7 +20,6 @@ public class CheckRotateArray {
     }
 
     public static void main(String[] args) {
-
         int[] arr = {1, 2, 3, 4, 5};
         CheckRotateArray.rotateArray(arr);
         for (int num : arr) {

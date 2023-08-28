@@ -10,13 +10,14 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 public class CheckMinimum {
 
     public static int findMinimum(int[] arr) {  // O(n)
-        if (arr == null)
+        if (arr == null) {
             return 0;
+        }
 
         int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
+        for (final int j : arr) {
+            if (j < min) {
+                min = j;
             }
         }
 

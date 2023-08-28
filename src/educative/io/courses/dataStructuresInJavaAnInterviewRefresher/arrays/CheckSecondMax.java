@@ -9,43 +9,44 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
  */
 public class CheckSecondMax {
 
-    public static int findSecondMaximum(int[] arr) {  // O(n) time
-
+    public static int findSecondMaximum(int[] arr) {
+        // O(n) time
         int max1 = -1;
         int max2 = -1;
 
-        if (arr == null)
+        if (arr == null) {
             return max2;
+        }
 
-        for (int i = 0; i < arr.length; i++) {
-            if (max1 < arr[i]) {
+        for (final int j : arr) {
+            if (max1 < j) {
                 max2 = max1;
-                max1 = arr[i];
-            } else if (max2 < arr[i]) {
-                max2 = arr[i];
+                max1 = j;
+            } else if (max2 < j) {
+                max2 = j;
             }
-
         }
 
         return max2;
     }
 
-    public static int findSecondMaximum2(int[] arr) {  // n + n = O(n) time
-
+    public static int findSecondMaximum2(int[] arr) {
+        // n + n = O(n) time
         int max1 = -1;
         int max2 = -1;
 
-        if (arr == null)
+        if (arr == null) {
             return max2;
-
-        for (int i = 0; i < arr.length; i++) {
-            if (max1 < arr[i])
-                max1 = arr[i];
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            if (max1 != arr[i] && max2 < arr[i])
-                max2 = arr[i];
+        for (final int j : arr) {
+            if (max1 < j)
+                max1 = j;
+        }
+
+        for (final int j : arr) {
+            if (max1 != j && max2 < j)
+                max2 = j;
         }
 
         return max2;

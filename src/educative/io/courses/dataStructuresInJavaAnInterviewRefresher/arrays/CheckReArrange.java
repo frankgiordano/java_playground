@@ -14,40 +14,35 @@ public class CheckReArrange {
     public static void reArrange1(int[] arr) {
         // time n+n+n = 3n = O(n)
         // space O(1)
-
-        if (arr == null)
+        if (arr == null) {
             return;
+        }
 
         int size = arr.length;
-
         int[] result = new int[size];
-
         int index = 0;
-        for (int i = 0; i < size; i++) {
-            if (arr[i] < 0)
-                result[index++] = arr[i];
+
+        for (final int j : arr) {
+            if (j < 0)
+                result[index++] = j;
         }
 
-        for (int i = 0; i < size; i++) {
-            if (arr[i] > 0)
-                result[index++] = arr[i];
+        for (final int j : arr) {
+            if (j > 0)
+                result[index++] = j;
         }
 
-        for (int i = 0; i < size; i++) {
-            arr[i] = result[i];
-        }
-
+        System.arraycopy(result, 0, arr, 0, size);
     }
 
     public static void reArrange2(int[] arr) {
         // time O(n)
         // space O(1)
-
-        if (arr == null)
+        if (arr == null) {
             return;
+        }
 
         int size = arr.length;
-
         int j = 0;
         for (int i = 0; i < size; i++) {
             if (i != j) {
@@ -61,21 +56,18 @@ public class CheckReArrange {
 
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int[] arr = {-1, 2, 3, -5, -3, -10, 7};
 
         CheckReArrange.reArrange1(arr);
-
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (final int j : arr) {
+            System.out.print(j + " ");
         }
-
         System.out.println();
 
-        CheckReArrange.reArrange1(arr);
-
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        CheckReArrange.reArrange2(arr);
+        for (final int j : arr) {
+            System.out.print(j + " ");
         }
     }
 

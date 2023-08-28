@@ -15,17 +15,18 @@ public class CheckSum {
         // n = 100
         // 100 - 1 = 99 check for 99 in arr in outer loop
         // if found then arr[i] and arr[j] added to result and return
-        if (arr == null)
+        if (arr == null) {
             return null;
+        }
 
         int[] result = new int[2];
 
-        for (int i = 0; i < arr.length; i++) {
-            int difference = n - arr[i];
-            for (int j = 0; j < arr.length; j++) {
-                if (difference == arr[j]) {
-                    result[0] = arr[i];
-                    result[1] = arr[j];
+        for (final int k : arr) {
+            int difference = n - k;
+            for (final int i : arr) {
+                if (difference == i) {
+                    result[0] = k;
+                    result[1] = i;
                     return result;
                 }
             }
@@ -40,7 +41,6 @@ public class CheckSum {
         for (int num : arr) {
             System.out.print(num + " ");
         }
-
     }
 
 }

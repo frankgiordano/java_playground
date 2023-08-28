@@ -19,15 +19,14 @@ public class soliderRank {
 
     public static int solution(int[] ranks) {
         int count = 0;
-        Set<Integer> uniqueRanks = new HashSet<Integer>();
+        Set<Integer> uniqueRanks = new HashSet<>();
 
-        for (int i = 0; i < ranks.length; i++) {
-            uniqueRanks.add(ranks[i]);
+        for (final int i : ranks) {
+            uniqueRanks.add(i);
         }
 
-        for (int i = 0; i < ranks.length; i++) {
-            int rank = ranks[i];
-            if (uniqueRanks.contains(rank + 1))
+        for (int i : ranks) {
+            if (uniqueRanks.contains(i + 1))
                 count++;
         }
 
@@ -42,4 +41,5 @@ public class soliderRank {
         int[] ranks3 = {4, 4, 3, 3, 1, 0};
         System.out.println(soliderRank.solution(ranks3));
     }
+
 }

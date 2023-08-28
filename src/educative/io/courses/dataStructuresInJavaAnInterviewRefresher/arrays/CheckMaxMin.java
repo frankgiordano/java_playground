@@ -37,20 +37,17 @@ class CheckMaxMin {
         }
 
         result[index] = arr[start];
-
-        for (int i = 0; i < arr.length; i++)
-            arr[i] = result[i];
+        System.arraycopy(result, 0, arr, 0, arr.length);
     }
 
     public static void maxMin(int[] arr) {
         // time O(n), space O(n)
-        if (arr == null)
+        if (arr == null) {
             return;
+        }
 
         int size = arr.length;
-
         int[] result = new int[size];
-
         int indexResult = 0;
         for (int i = 0, j = size - 1; i < j; i++, j--) {
             result[indexResult] = arr[j];
@@ -58,25 +55,22 @@ class CheckMaxMin {
             indexResult = indexResult + 2;
         }
 
-        for (int i = 0; i < size; i++) {
-            arr[i] = result[i];
-        }
+        System.arraycopy(result, 0, arr, 0, size);
     }
 
     public static void maxMin2(int[] arr) {
         // time O(n), space O(n)
-        if (arr == null)
+        if (arr == null) {
             return;
+        }
 
         int size = arr.length;
-
         int[] result = new int[size];
 
         int i = 0;
         int start = 0;
         int end = size - 1;
         boolean switcher = true;
-
         while (start <= end) {
             if (switcher) {
                 result[i++] = arr[end--];
@@ -87,9 +81,7 @@ class CheckMaxMin {
             }
         }
 
-        for (int k = 0; k < size; k++) {
-            arr[k] = result[k];
-        }
+        System.arraycopy(result, 0, arr, 0, size);
     }
 
     public static void maxMin3(int[] arr) {
@@ -114,29 +106,29 @@ class CheckMaxMin {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 8, 10};
         CheckMaxMin.maxMin(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (final int i : arr) {
+            System.out.print(i + " ");
         }
         System.out.println();
         int[] arr2 = {1, 2, 3, 4, 5, 6, 8, 10};
         CheckMaxMin.maxMin(arr2);
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.print(arr2[i] + " ");
+        for (final int i : arr2) {
+            System.out.print(i + " ");
         }
         System.out.println();
         int[] arr3 = {1, 2, 3, 4, 5, 6, 8, 10};
         CheckMaxMin.maxMin2(arr3);
-        for (int i = 0; i < arr3.length; i++) {
-            System.out.print(arr3[i] + " ");
+        for (final int i : arr3) {
+            System.out.print(i + " ");
         }
         System.out.println();
         int[] arr4 = {1, 2, 3, 4, 5};
         CheckMaxMin.maxMin3(arr4);
-        for (int i = 0; i < arr4.length; i++) {
-            System.out.print(arr4[i] + " ");
+        for (final int i : arr4) {
+            System.out.print(i + " ");
         }
     }
 

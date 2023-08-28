@@ -15,15 +15,16 @@ public class CheckMaxSumSubArray {
 
     public static int getMaxSumSubArray(int[] arr) {
         // time (O)n2 space (O)1
-        if (arr == null || arr.length == 0)
+        if (arr == null || arr.length == 0) {
             return 0;
+        }
 
-        if (arr.length == 1)
+        if (arr.length == 1) {
             return arr[0];
+        }
 
         int maxSum = arr[0];
         int sum;
-
         for (int i = 0; i < arr.length; i++) {
             sum = 0;
             for (int j = i; j < arr.length; j++) {
@@ -38,23 +39,27 @@ public class CheckMaxSumSubArray {
 
     public static int getMaxSumSubArray2(int[] arr) {
         // time (O)n space (O)1
-        if (arr == null || arr.length == 0)
+        if (arr == null || arr.length == 0) {
             return 0;
+        }
 
-        if (arr.length == 1)
+        if (arr.length == 1) {
             return arr[0];
+        }
 
         int currMax = arr[0];
         int globalMax = arr[0];
 
         for (int i = 1; i < arr.length; i++) {
-            if (currMax < 0)
+            if (currMax < 0) {
                 currMax = arr[i];
-            else
+            } else {
                 currMax = currMax + arr[i];
+            }
 
-            if (globalMax < currMax)
+            if (globalMax < currMax) {
                 globalMax = currMax;
+            }
         }
 
         return globalMax;

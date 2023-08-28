@@ -10,9 +10,9 @@ package educative.io.courses.dataStructuresInJavaAnInterviewRefresher.arrays;
 public class CheckMergeArray {
 
     public static int[] mergeArrays(int[] arr1, int[] arr2) {
-
-        if (arr1 == null || arr2 == null)
+        if (arr1 == null || arr2 == null) {
             return null;
+        }
 
         int[] result = new int[arr1.length + arr2.length];
 
@@ -50,11 +50,10 @@ public class CheckMergeArray {
     public static void main(String[] args) {
         int[] arr1 = {1, 3, 4, 5};
         int[] arr2 = {2, 6, 7, 8};
-        int[] result;
-
-        result = CheckMergeArray.mergeArrays(arr1, arr2);
-        for (int num : result)
+        int[] result = CheckMergeArray.mergeArrays(arr1, arr2);
+        for (int num : result) {
             System.out.println(num);
+        }
     }
 
 }
