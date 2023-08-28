@@ -9,21 +9,15 @@ author francesco giordano
 public class TwoMissingNumbers {
 
     public static int[] getTwoMissingNumber(int[] nums) {
-        int size = nums.length + 2; // it is missing two entries add two to total size
-        System.out.println("size = " + size);
-
-        long totalSum = size * (size + 1) / 2;
-        System.out.println("totalSum = " + totalSum);
+        // it is missing two entries add two to total size
+        int size = nums.length + 2;
+        long totalSum = (long) size * (size + 1) / 2;
 
         long numsSum = 0;
         for (int i : nums)
             numsSum += i;
 
-        System.out.println("numsSum = " + numsSum);
-
         int pivot = (int) ((totalSum - numsSum) / 2);
-
-        System.out.println(pivot);
 
         int totalXorLeft = 0;
         int totalXorRight = 0;
@@ -38,10 +32,11 @@ public class TwoMissingNumbers {
         int numsXorRight = 0;
 
         for (int i : nums) {
-            if (i <= pivot)
+            if (i <= pivot) {
                 numsXorLeft ^= i;
-            else
+            } else {
                 numsXorRight ^= i;
+            }
         }
 
         return new int[]{totalXorLeft ^ numsXorLeft, totalXorRight ^ numsXorRight};
@@ -49,8 +44,8 @@ public class TwoMissingNumbers {
 
     public static void main(String[] args) {
         int[] input = {1, 2, 4, 6};
-
         int[] result = TwoMissingNumbers.getTwoMissingNumber(input);
+        
         for (int i : result)
             System.out.print(i + " ");
     }
