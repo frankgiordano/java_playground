@@ -65,7 +65,7 @@ public class TopKFrequentElements {
         // this is O(nlogk) slightly better
 
         List<Integer> result = new LinkedList<>();
-        Map<Integer, Integer> frequency = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> frequency = new HashMap<>();
         Queue<Integer> queue = new PriorityQueue<Integer>((n1, n2) -> frequency.get(n1) - frequency.get(n2));
 
         for (int num : nums) {

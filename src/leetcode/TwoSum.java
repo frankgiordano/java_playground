@@ -48,7 +48,7 @@ public class TwoSum {
         // time = O(n)
         // space = O(n)
 
-        Map<Integer, Integer> numMap = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> numMap = new HashMap<>();
         int[] result = new int[2];
 
         for (int i = 0; i < nums.length; i++) {

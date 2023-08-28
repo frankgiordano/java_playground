@@ -23,7 +23,7 @@ public class RemoveDuplicates {
         // time O(n+m)
         // this is slow compare to the method below
 
-        LinkedHashSet<Integer> uniqueNums = new LinkedHashSet<Integer>();
+        LinkedHashSet<Integer> uniqueNums = new LinkedHashSet<>();
         for (Integer num : nums)
             uniqueNums.add(num);
 

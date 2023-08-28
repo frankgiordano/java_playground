@@ -23,7 +23,7 @@ public class ReverseInt {
         if (x < 10 && x > -10)
             return x; // means one digit sent nothing to reverse
 
-        List<Integer> nums = new ArrayList<Integer>();
+        List<Integer> nums = new ArrayList<>();
         int nextInt = 0;
 
         while (x != 0) {
