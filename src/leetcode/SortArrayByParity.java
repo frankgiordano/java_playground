@@ -31,11 +31,13 @@ public class SortArrayByParity {
                 A[i2] = tmp;
             }
 
-            if (A[i1] % 2 == 0)
+            if (A[i1] % 2 == 0) {
                 i1++;
+            }
 
-            if (A[i2] % 2 != 0)
+            if (A[i2] % 2 != 0) {
                 i2--;
+            }
         }
 
         return A;
@@ -43,8 +45,9 @@ public class SortArrayByParity {
 
     public static void output(int[] input) {
         SortArrayByParity.sortArrayByParity(input);
-        for (int i : input)
+        for (int i : input) {
             System.out.print(i + " ");
+        }
         System.out.println();
     }
 
