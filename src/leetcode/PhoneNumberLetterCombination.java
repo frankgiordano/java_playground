@@ -16,7 +16,7 @@ author francesco giordano
 
 This is a classic BFS solution.
  */
-public class PhoneNumberStringCombs {
+public class PhoneNumberLetterCombination {
 
     /**
      * Runtime: 1 ms, faster than 78.72% of Java online submissions for Letter
@@ -69,7 +69,6 @@ public class PhoneNumberStringCombs {
                 }
             }
             lst.addAll(tmp);
-
         }
 
         return lst;
@@ -82,7 +81,7 @@ public class PhoneNumberStringCombs {
      */
     public static List<String> letterCombinations2(String digits) {
 
-        Queue<String> list = new LinkedList<String>();
+        Queue<String> list = new LinkedList<>();
 
         if (digits == null || digits.isEmpty())
             return new ArrayList<>(list);
@@ -161,7 +160,7 @@ public class PhoneNumberStringCombs {
 
                 // add each letter of letters to the queue
                 for (int j = 0; j < letters.length(); j++) {
-                    list.add(combo + Character.toString(letters.charAt(j)));
+                    list.add(combo + letters.charAt(j));
                 }
             }
         }
@@ -261,15 +260,15 @@ public class PhoneNumberStringCombs {
 
     public static void main(String[] args) {
         String digits = "9345";
-        System.out.println(PhoneNumberStringCombs.letterCombinations1(digits));
+        System.out.println(PhoneNumberLetterCombination.letterCombinations1(digits));
         digits = "9345";
-        System.out.println(PhoneNumberStringCombs.letterCombinations2(digits));
+        System.out.println(PhoneNumberLetterCombination.letterCombinations2(digits));
         digits = "9345";
-        System.out.println(PhoneNumberStringCombs.letterCombinations3(digits));
+        System.out.println(PhoneNumberLetterCombination.letterCombinations3(digits));
         digits = "9345";
-        System.out.println(PhoneNumberStringCombs.letterCombinations4(digits));
+        System.out.println(PhoneNumberLetterCombination.letterCombinations4(digits));
         digits = "9345";
-        System.out.println(PhoneNumberStringCombs.letterCombinations5(digits));
+        System.out.println(PhoneNumberLetterCombination.letterCombinations5(digits));
     }
 
 }
