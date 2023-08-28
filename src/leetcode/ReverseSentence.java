@@ -21,8 +21,9 @@ public class ReverseSentence {
     public static String reverseWords(String s) {
 
         // if nothing is sent in return an empty string
-        if (s == null || s.isEmpty())
+        if (s == null || s.isEmpty()) {
             return "";
+        }
 
         int i = 0; // this holds the index value of the first char of a word
         int size = s.length(); // this is the size of the entire sentence
@@ -30,7 +31,6 @@ public class ReverseSentence {
 
         // inspect entire sentence char array
         for (int j = 0; j < size; j++) {
-
             // look for a space, if found then you may have found a word, reverse the word
             if (arr[j] == ' ') {
                 reverse(arr, i, j - 1);
@@ -59,15 +59,15 @@ public class ReverseSentence {
     public static String reverseWords2(char[] arr) {
 
         // if nothing is sent in return an emptry string
-        if (arr == null || arr.length == 0)
+        if (arr == null || arr.length == 0) {
             return "";
+        }
 
         int i = 0; // this holds the index value of the first char of a word
         int size = arr.length; // this is the size of the entire sentence
 
         // inspect entire sentence char array
         for (int j = 0; j < size; j++) {
-
             // look for a space, if found then you may have found a word, reverse the word
             if (arr[j] == ' ') {
                 reverse(arr, i, j - 1);
@@ -96,8 +96,9 @@ public class ReverseSentence {
      */
     public static String reverseWords3(String s) {
 
-        if (s == null || s.isEmpty())
+        if (s == null || s.isEmpty()) {
             return "";
+        }
 
         StringBuilder sb = new StringBuilder();
 
@@ -109,19 +110,15 @@ public class ReverseSentence {
         // the current word
         int i = arr.length - 1;
         while (i >= 0) {
-
             if (arr[i] == ' ') {
-
                 if (end != -1) {
                     write(arr, i + 1, end, sb);
                     end = -1;
                 }
-
             } else {
                 if (end == -1)
                     end = i;
             }
-
             i--;
         }
 
@@ -134,7 +131,7 @@ public class ReverseSentence {
 
     public static void write(char[] array, int start, int end, StringBuilder sb) {
         while (start <= end) {
-            sb.append(String.valueOf(array[start++]));
+            sb.append(array[start++]);
         }
         sb.append(" ");
     }
