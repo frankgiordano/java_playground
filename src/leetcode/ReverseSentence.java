@@ -21,7 +21,7 @@ public class ReverseSentence {
     public static String reverseWords(String s) {
 
         // if nothing is sent in return an empty string
-        if (s == null || s.length() == 0)
+        if (s == null || s.isEmpty())
             return "";
 
         int i = 0; // this holds the index value of the first char of a word
@@ -52,7 +52,7 @@ public class ReverseSentence {
     /*
      * Given an input string, reverse the string word by word.
      *
-     * Input will contain no leading or trailing spaces or multipe spaces
+     * Input will contain no leading or trailing spaces or multiple spaces
      *
      * runtime O(n) space O(1)
      */
@@ -92,23 +92,22 @@ public class ReverseSentence {
      * contain leading or trailing spaces. You need to reduce multiple spaces
      * between two words to a single space in the reversed string.
      *
-     * leetcode = 3ms time, 38.2 MB MB memory
+     * leetcode = 3ms time, 38.2 MB memory
      */
     public static String reverseWords3(String s) {
 
-        if (s == null || s.length() == 0)
+        if (s == null || s.isEmpty())
             return "";
 
         StringBuilder sb = new StringBuilder();
 
         char[] arr = s.toCharArray();
         int end = -1;
-        int size = arr.length - 1;
 
         // i variable will hold current index that transverses the input
         // end variable uses i to set the current end index value of
         // the current word
-        int i = size;
+        int i = arr.length - 1;
         while (i >= 0) {
 
             if (arr[i] == ' ') {
@@ -130,7 +129,7 @@ public class ReverseSentence {
             write(arr, 0, end, sb);
         }
 
-        return sb.length() > 0 ? sb.substring(0, sb.length() - 1).toString() : "";
+        return sb.length() > 0 ? sb.substring(0, sb.length() - 1) : "";
     }
 
     public static void write(char[] array, int start, int end, StringBuilder sb) {
@@ -160,5 +159,5 @@ public class ReverseSentence {
         System.out.println(ReverseSentence.reverseWords(input));
         System.out.println(ReverseSentence.reverseWords3(input));
     }
-    
+
 }
